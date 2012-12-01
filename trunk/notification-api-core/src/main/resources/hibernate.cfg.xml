@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="ousl.group4.model.Bid"/>
+        <mapping class="ousl.group4.model.BidMax"/>
+        <mapping class="ousl.group4.model.Category"/>
+        <mapping class="ousl.group4.model.Country"/>
+        <mapping class="ousl.group4.model.Item"/>
+        <mapping class="ousl.group4.model.Listing"/>
+        <mapping class="ousl.group4.model.ListingTime"/>
+        <mapping class="ousl.group4.model.Payment"/>
+        <mapping class="ousl.group4.model.Purchase"/>
+        <mapping class="ousl.group4.model.Role"/>
+        <mapping class="ousl.group4.model.User"/>
+        <mapping class="ousl.group4.model.UserRole"/>
+    </session-factory>
+</hibernate-configuration>

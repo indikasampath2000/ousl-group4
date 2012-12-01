@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans 
+             					http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+              					http://www.springframework.org/schema/security 
+              					http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <!-- spring security 3.1 supports multiple http declaration-->
+    <http pattern="/images/**" security="none"/>
+    <http pattern="/styles/**" security="none"/>
+    <http pattern="/scripts/**" security="none"/>
+
+    <http auto-config="true" access-denied-page="/access-denied.jsp">
+        <intercept-url pattern="/welcome.html*"
+                       access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/goodbye.html*" access="ROLE_ANONYMOUS"/>
+        <intercept-url pattern="/signup.html*" access="ROLE_ANONYMOUS"/>
+
+
+        <form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?error=true"
+                    login-processing-url="/j_spring_security_check" default-target-url="/home.html"/>
+        <logout delete-cookies="JSESSIONID"/>
+        <session-management>
+            <concurrency-control max-sessions="1" error-if-maximum-exceeded="true"/>
+        </session-management>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="userDao">
+            <password-encoder hash="md5"/>
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>

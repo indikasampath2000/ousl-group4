@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- connection details -->
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.url">jdbc:h2:tcp://localhost/~/data/notification_api;MVCC=TRUE</property>
+        <!--jdbc:h2:~/data/notification_api-->
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- mappings for application model classes -->
+        <mapping class="ousl.group4.email.model.Mail"/>
+        <mapping class="ousl.group4.email.model.MailAttachments"/>
+        <mapping class="ousl.group4.email.model.MailRecipients"/>
+        <mapping class="ousl.group4.email.model.MailInlineImages"/>
+        <mapping class="ousl.group4.email.model.MailSchedule"/>
+        <mapping class="ousl.group4.sms.model.Sms"/>
+        <mapping class="ousl.group4.sms.model.SmsRecipients"/>
+        <mapping class="ousl.group4.sms.model.SmsSchedule"/>
+
+    </session-factory>
+</hibernate-configuration>

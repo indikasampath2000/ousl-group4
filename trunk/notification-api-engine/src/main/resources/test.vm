@@ -1,0 +1,14 @@
+<html>
+
+<body>
+<h3>Hello $name,</h3>
+
+<h4>This is test template...</h4>
+
+<p><img src="cid:ousl"></p>
+
+<p>$para</p>
+
+</body>
+
+</html>
