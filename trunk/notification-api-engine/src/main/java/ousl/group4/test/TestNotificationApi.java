@@ -1,6 +1,7 @@
 package ousl.group4.test;
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 import ousl.group4.email.model.*;
 import ousl.group4.email.service.MailScheduleService;
@@ -9,13 +10,22 @@ import ousl.group4.email.service.MailService;
 import ousl.group4.email.service.impl.MailScheduleServiceImpl;
 import ousl.group4.email.service.impl.MailSenderImpl;
 import ousl.group4.email.service.impl.MailServiceImpl;
+import ousl.group4.sms.model.Sms;
+import ousl.group4.sms.model.SmsKeyBox;
+import ousl.group4.sms.service.SmsNotificationService;
+import ousl.group4.sms.service.SmsSender;
+import ousl.group4.sms.service.SmsService;
+import ousl.group4.sms.service.impl.SmsNotificationServiceImpl;
+import ousl.group4.sms.service.impl.SmsSenderImpl;
+import ousl.group4.sms.service.impl.SmsServiceImpl;
 
 public class TestNotificationApi {
 
     public static void main(String[] args) {
         MailSender mailSender = new MailSenderImpl();
         MailScheduleService mailScheduleService = new MailScheduleServiceImpl();
-        MailService mailService = new MailServiceImpl();
+        SmsSender smsSender = new SmsSenderImpl();
+
 
         // create mail schedule job
         String jobName = "todayJob2";
@@ -59,13 +69,13 @@ public class TestNotificationApi {
         mailMap.put("para", "Test velocity body with inline image");
         try {
 
-            for (int i = 0; i < mailAddress.length; i++) {
+            /*for (int i = 0; i < mailAddress.length; i++) {
                 mailMap.put(MailKeyBox.RECIPIENTS, new String[][]{{mailAddress[i][0], mailAddress[i][1]}});
                 // mail notification sender
                 //mailSender.send(mailMap);
                 //mailSender.send(mailMap, "/test.vm");
-                mailSender.scheduleMail(mailMap, mailSchedule);
-                System.out.println(mailAddress[i][0] + " : " + mailAddress[i][1]);
+                //mailSender.scheduleMail(mailMap, mailSchedule);
+                //System.out.println(mailAddress[i][0] + " : " + mailAddress[i][1]);
             }
 
             List<Mail> mails = mailService.getScheduleMailNotificationByMailSchedule(mailSchedule);
@@ -84,10 +94,28 @@ public class TestNotificationApi {
                 System.out.println(calendar.get(Calendar.MONTH)+1);
                 System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
                 System.out.println(calendar.get(Calendar.YEAR));
-            }
+            }*/
+
+            /*String number = "0716424744";
+            Pattern pattern = Pattern.compile("\\d*");
+            if(pattern.matcher(number).matches()){
+                System.out.println("valid phone number");
+            }*/
+
+
+            Map<String, Object> smsMap = new HashMap<String, Object>();
+            smsMap.put(SmsKeyBox.SENDER, "0720260442");
+            smsMap.put(SmsKeyBox.RECIPIENTS, new String[]{"0772269376", "0773596220", "0712496994"});
+            smsMap.put(SmsKeyBox.SMS_BODY, "Bazinga... Test Message from Notification API");
+            //smsSender.send(smsMap);
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+
     }
 }

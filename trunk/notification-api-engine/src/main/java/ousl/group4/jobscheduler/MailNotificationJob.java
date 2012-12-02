@@ -47,8 +47,8 @@ public class MailNotificationJob implements Job {
             }
             int tasksDone = mailQueue.stopWhenAllTaskFinished();
             long endTime = System.currentTimeMillis();
-            System.out.println("Total Time : " + (endTime - startTime));
-            System.out.println("Number of Tasks Executed : " + tasksDone);
+            System.out.println("Total Time (email) : " + (endTime - startTime));
+            System.out.println("Number of Tasks Executed (email) : " + tasksDone);
 
         }
     }
