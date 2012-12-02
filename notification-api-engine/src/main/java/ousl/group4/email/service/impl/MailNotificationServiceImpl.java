@@ -28,9 +28,9 @@ public class MailNotificationServiceImpl implements MailNotificationService {
 
     public MailNotificationServiceImpl() {
         try {
-            properties.load(getClass().getResourceAsStream("/notification-api.properties"));
+            properties.load(getClass().getResourceAsStream("/notification-api-smtp.properties"));
         } catch (IOException e) {
-            e.printStackTrace(); //TODO: write a logger here 'notification-api.properties not found.'
+            e.printStackTrace(); //TODO: write a logger here 'notification-api-smtp.properties not found.'
         }
 
     }

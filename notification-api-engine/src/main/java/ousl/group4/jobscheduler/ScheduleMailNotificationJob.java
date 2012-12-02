@@ -30,7 +30,7 @@ public class ScheduleMailNotificationJob implements Job{
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         JobDataMap jobDataMap = jobExecutionContext.getJobDetail().getJobDataMap();
-        String jobName = jobDataMap.getString("jobName");
+        String jobName = jobDataMap.getString("mailJobName");
         MailSchedule mailSchedule = mailScheduleService.isScheduleJobExist(jobName);
         List<Mail> mailList = mailService.getScheduleMailNotificationByMailSchedule(mailSchedule);
         if (mailList.size() > 0) {
@@ -56,9 +56,8 @@ public class ScheduleMailNotificationJob implements Job{
             }
             int tasksDone = mailQueue.stopWhenAllTaskFinished();
             long endTime = System.currentTimeMillis();
-            System.out.println("Total Time : " + (endTime - startTime));
-            System.out.println("Number of Tasks Executed : " + tasksDone);
-
+            System.out.println("Total Time (mail) : " + (endTime - startTime));
+            System.out.println("Number of Tasks Executed (mail) : " + tasksDone);
         }
     }
 }

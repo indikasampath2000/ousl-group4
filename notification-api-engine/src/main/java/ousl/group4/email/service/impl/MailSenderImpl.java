@@ -457,7 +457,7 @@ public class MailSenderImpl implements MailSender {
                         .build();
 
                 // set job to execute
-                jobDetail.getJobDataMap().put("jobName", mailSchedule.getJobName());
+                jobDetail.getJobDataMap().put("mailJobName", mailSchedule.getJobName());
 
                 if(mailSchedule.getScheduleType().equalsIgnoreCase(MailKeyBox.FIRE_ONCE)){
                     SimpleTrigger simpleTrigger = (SimpleTrigger)TriggerBuilder.newTrigger()
@@ -672,7 +672,7 @@ public class MailSenderImpl implements MailSender {
                         .build();
 
                 // set job to execute
-                jobDetail.getJobDataMap().put("jobName", mailSchedule.getJobName());
+                jobDetail.getJobDataMap().put("mailJobName", mailSchedule.getJobName());
 
                 if(mailSchedule.getScheduleType().equalsIgnoreCase(MailKeyBox.FIRE_ONCE)){
                     SimpleTrigger simpleTrigger = (SimpleTrigger)TriggerBuilder.newTrigger()

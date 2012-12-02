@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.*;
 
 public class SmsSenderImpl implements SmsSender {
 
@@ -30,9 +31,15 @@ public class SmsSenderImpl implements SmsSender {
      */
     @Override
     public void send(Map<String, Object> smsMap) throws NotificationAPIException {
+
+        Pattern pattern = Pattern.compile("\\d*");
+
         String sender = (String) smsMap.get("sender");
         if (sender == null || sender.isEmpty()) {
             throw new NotificationAPIException("sender is null or empty");
+        }
+        if(!pattern.matcher(sender).matches()){
+            throw new NotificationAPIException("invalid sender phone number");
         }
         String[] recipients = (String[]) smsMap.get("recipients");
         if (recipients == null || recipients.length < 1) {
@@ -41,9 +48,13 @@ public class SmsSenderImpl implements SmsSender {
         for (int i = 0; i < recipients.length; i++) {
             if (recipients[i].isEmpty()) {
                 throw new NotificationAPIException("recipient is null or empty");
+            }else {
+                if(!pattern.matcher(recipients[i]).matches()){
+                    throw new NotificationAPIException("invalid recipient phone number");
+                }
             }
         }
-        String smsBody = (String) smsMap.get("mailBody");
+        String smsBody = (String) smsMap.get("smsBody");
         if (smsBody == null) {
             throw new NotificationAPIException("sms body is null");
         }
@@ -76,9 +87,15 @@ public class SmsSenderImpl implements SmsSender {
      */
     @Override
     public void scheduleMail(Map<String, Object> smsMap, SmsSchedule smsSchedule) throws NotificationAPIException {
+
+        Pattern pattern = Pattern.compile("\\d");
+
         String sender = (String) smsMap.get("sender");
         if (sender == null || sender.isEmpty()) {
             throw new NotificationAPIException("sender is null or empty");
+        }
+        if(!pattern.matcher(sender).matches()){
+            throw new NotificationAPIException("invalid sender phone number");
         }
         String[] recipients = (String[]) smsMap.get("recipients");
         if (recipients == null || recipients.length < 1) {
@@ -87,9 +104,13 @@ public class SmsSenderImpl implements SmsSender {
         for (int i = 0; i < recipients.length; i++) {
             if (recipients[i].isEmpty()) {
                 throw new NotificationAPIException("recipient is null or empty");
+            }else {
+                if(!pattern.matcher(recipients[i]).matches()){
+                    throw new NotificationAPIException("invalid recipient phone number");
+                }
             }
         }
-        String smsBody = (String) smsMap.get("mailBody");
+        String smsBody = (String) smsMap.get("smsBody");
         if (smsBody == null) {
             throw new NotificationAPIException("sms body is null");
         }
@@ -149,7 +170,7 @@ public class SmsSenderImpl implements SmsSender {
                         .build();
 
                 // set job to execute
-                jobDetail.getJobDataMap().put("jobName", smsSchedule.getJobName());
+                jobDetail.getJobDataMap().put("smsJobName", smsSchedule.getJobName());
 
                 if(smsSchedule.getScheduleType().equalsIgnoreCase(SmsKeyBox.FIRE_ONCE)){
                     SimpleTrigger simpleTrigger = (SimpleTrigger)TriggerBuilder.newTrigger()
