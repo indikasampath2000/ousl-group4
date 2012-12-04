@@ -2,7 +2,7 @@
 <%@ page import="org.springframework.security.core.AuthenticationException" %>
 
 <head>
-    <title><fmt:message key="signup.title"/></title>
+    <title>Sign-up</title>
 </head>
 
 

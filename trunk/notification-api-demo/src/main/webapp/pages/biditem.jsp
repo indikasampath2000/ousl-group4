@@ -68,6 +68,9 @@
         });
         //-->
     </script>
+
+    <title>Bid and Win</title>
+
 </head>
 
 <!-- Start Container -->
@@ -78,37 +81,32 @@
 
 
         <div class="item-data-box">
-            <div class="item-tit">Adidas men's running shoes Sandrest</div>
+            <div class="item-tit">${listing.item.name}</div>
             <div class="clear"></div>
             <div class="item-data-col1">
                 <div class="img-box">
-                    <img src="images/item.png"/>
+                    <img src="${listing.item.imagePath}" width="222" height="166"/>
                 </div>
-                <img src="images/item-thumb.jpg"/> <img
-                    src="images/item-thumb.jpg"/> <img src="images/item-thumb.jpg"/>
-                <img src="images/item-thumb.jpg"/>
             </div>
             <div class="item-data-col2">
                 <div class="count-dwn-wrapper">
                     <div class="hr">30</div>
                     <div class="min">20</div>
                     <div class="sec">10</div>
-                    <div class="bids">10</div>
+                    <div class="bids">${listing.bidCount}</div>
                 </div>
                 <div class="clear"></div>
                 <div class="price-box">
-                    <span class="itm-price">Rs.5200.00 ($50) </span>
-                    <span class="last-bid">Last Bid Rs. 4500.00 </span>
+                    <span class="itm-price">Max Bid : LKR.${listing.maxBid}</span>
                 </div>
-                <img class="buy-btn" src="images/buy.jpg"/>
 
                 <div class="clear"></div>
 
                 <form action="" method="get">
                     <div class="price-box2">
-                        <span class="itm-price">Quantity: 5 </span>
+                        <span class="itm-price">Quantity: ${listing.quantityRemain} </span>
                         <span class="last-bid">Item condition: New</span>
-                        <span class="last-bid">Your Bid: <input name="textfield" type="text" id="textfield" size="10"/></span>
+                        <span class="last-bid">Bid: <input name="textfield" type="text" id="textfield" size="7"/></span>
                     </div>
                     <input class="bid-btn" name="" type="image" src="images/bid.jpg"/>
                 </form>
@@ -142,68 +140,37 @@
                 </div>
             </div>
             <div id="tab1" class="tab-content">
-                <div class="title">Adidas men's running shoes 1</div>
+                <div class="title">Description</div>
                 <div class="desc">
                     <p>
-                        Easy care for your hair, SalonDry Compact , With 2 Years
-                        Warranty............ Easy to use <br/>
+                        ${listing.item.description}
                     </p>
-
-                    <p>Easy storage hook Professional results</p>
-
-                    <p>for careful drying</p>
-
-                    <p>1400W for beautiful results</p>
-
-                    <p>Narrow concentrator for focused airflow Technical specifications</p>
-
-                    <p>Wattage: 1400 W Serviceability</p>
-
-                    <p>Replacement</p>
+                    <p>
+                        Item Location : ${listing.itemLocation}
+                    </p>
                 </div>
             </div>
 
             <div id="tab2" class="tab-content">
-                <div class="title">Adidas men's running shoes 2</div>
+                <div class="title">Shipping Details</div>
                 <div class="desc">
                     <p>
-                        Easy care for your hair, SalonDry Compact , With 2 Years
-                        Warranty............ Easy to use <br/>
+                        Shipping Cost : LKR. ${listing.shippingCost}
+                    </p>
+                    <p>
+                        Shipping Instructions : ${listing.shippingInstructions}
+                    </p>
+                    <p>
+                        Return Instructions : ${listing.returnInstructions}
                     </p>
 
-                    <p>Easy storage hook Professional results</p>
-
-                    <p>for careful drying</p>
-
-                    <p>1400W for beautiful results</p>
-
-                    <p>Narrow concentrator for focused airflow Technical specifications</p>
-
-                    <p>Wattage: 1400 W Serviceability</p>
-
-                    <p>Replacement</p>
                 </div>
             </div>
 
             <div id="tab3" class="tab-content">
-                <div class="title">Adidas men's running shoes 3</div>
+                <div class="title">Similar Items</div>
                 <div class="desc">
-                    <p>
-                        Easy care for your hair, SalonDry Compact , With 2 Years
-                        Warranty............ Easy to use <br/>
-                    </p>
 
-                    <p>Easy storage hook Professional results</p>
-
-                    <p>for careful drying</p>
-
-                    <p>1400W for beautiful results</p>
-
-                    <p>Narrow concentrator for focused airflow Technical specifications</p>
-
-                    <p>Wattage: 1400 W Serviceability</p>
-
-                    <p>Replacement</p>
                 </div>
             </div>
 

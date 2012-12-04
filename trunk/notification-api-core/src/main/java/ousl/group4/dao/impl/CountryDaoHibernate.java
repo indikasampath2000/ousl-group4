@@ -1,4 +1,4 @@
-package ousl.group4.dao.hibernate;
+package ousl.group4.dao.impl;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;

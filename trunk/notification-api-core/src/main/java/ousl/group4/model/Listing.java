@@ -1,9 +1,14 @@
 package ousl.group4.model;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "listing")
@@ -15,9 +20,9 @@ public class Listing implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
-    private Long itemId;
-    private int listingTimeId;
-    private Long categoryId;
+    private Item item;
+    private ListingTime listingTime;
+    private Category category;
     private int type;
     private BigDecimal price;
     private BigDecimal startingPrice;
@@ -31,6 +36,12 @@ public class Listing implements Serializable {
     private String shippingInstructions;
     private String returnInstructions;
     private String itemLocation;
+    private List<BidMax> bidMaxes = new ArrayList<BidMax>();
+    private List<Payment> payments = new ArrayList<Payment>();
+    private List<Bid> bids = new ArrayList<Bid>();
+    private BigDecimal maxBid;
+    private Integer bidCount;
+    private String remainingTime;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,31 +53,34 @@ public class Listing implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "item_id")
-    public Long getItemId() {
-        return itemId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id", nullable = false)
+    public Item getItem() {
+        return item;
     }
 
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
+    public void setItem(Item item) {
+        this.item = item;
     }
 
-    @Column(name = "listing_time_id")
-    public int getListingTimeId() {
-        return listingTimeId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "listing_time_id", nullable = false)
+    public ListingTime getListingTime() {
+        return listingTime;
     }
 
-    public void setListingTimeId(int listingTimeId) {
-        this.listingTimeId = listingTimeId;
+    public void setListingTime(ListingTime listingTime) {
+        this.listingTime = listingTime;
     }
 
-    @Column(name = "category_id")
-    public Long getCategoryId() {
-        return categoryId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", nullable = false)
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     @Column(name = "type")
@@ -186,4 +200,60 @@ public class Listing implements Serializable {
         this.itemLocation = itemLocation;
     }
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "listing")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    public List<BidMax> getBidMaxes() {
+        return bidMaxes;
+    }
+
+    public void setBidMaxes(List<BidMax> bidMaxes) {
+        this.bidMaxes = bidMaxes;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "listing")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(List<Payment> payments) {
+        this.payments = payments;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "listing")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    public List<Bid> getBids() {
+        return bids;
+    }
+
+    public void setBids(List<Bid> bids) {
+        this.bids = bids;
+    }
+
+    @Transient
+    public BigDecimal getMaxBid() {
+        return maxBid;
+    }
+
+    public void setMaxBid(BigDecimal maxBid) {
+        this.maxBid = maxBid;
+    }
+
+    @Transient
+    public Integer getBidCount() {
+        return bidCount;
+    }
+
+    public void setBidCount(Integer bidCount) {
+        this.bidCount = bidCount;
+    }
+
+    @Transient
+    public String getRemainingTime() {
+        return remainingTime;
+    }
+
+    public void setRemainingTime(String remainingTime) {
+        this.remainingTime = remainingTime;
+    }
 }

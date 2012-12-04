@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Access Denied | Notificaion API Demo</title>
+    <title>Access Denied | CeyBid</title>
 </head>
 <body>
 <h2>Access Denied</h2>

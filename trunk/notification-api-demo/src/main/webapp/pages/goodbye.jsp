@@ -1,7 +1,7 @@
 <%@ include file="/common/taglibs.jsp" %>
 
 <head>
-    <title>Login | <fmt:message key="webapp.name"/></title>
+    <title>Good-Bye</title>
 </head>
 
 <!-- Start Container -->
