@@ -2,6 +2,8 @@ package ousl.group4.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "category")
@@ -16,6 +18,7 @@ public class Category implements Serializable {
     private String name;
     private String description;
     private boolean status;
+    private List<Listing> listings = new ArrayList<Listing>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -54,5 +57,13 @@ public class Category implements Serializable {
         this.status = status;
     }
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+    public List<Listing> getListings() {
+        return listings;
+    }
+
+    public void setListings(List<Listing> listings) {
+        this.listings = listings;
+    }
 
 }

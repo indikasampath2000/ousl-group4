@@ -3,7 +3,9 @@ package ousl.group4.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "payment")
@@ -25,6 +27,7 @@ public class Payment implements Serializable {
     private Date purchaseDate;
     private Date paymentDate;
     private Date paymentReceivedDate;
+    private List<Purchase> purchases = new ArrayList<Purchase>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -127,6 +130,15 @@ public class Payment implements Serializable {
 
     public void setPaymentReceivedDate(Date paymentReceivedDate) {
         this.paymentReceivedDate = paymentReceivedDate;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "payment")
+    public List<Purchase> getPurchases() {
+        return purchases;
+    }
+
+    public void setPurchases(List<Purchase> purchases) {
+        this.purchases = purchases;
     }
 
 }

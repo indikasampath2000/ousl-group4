@@ -1,9 +1,7 @@
 <%@ include file="/common/taglibs.jsp" %>
 
 <head>
-    <title>
-        <fmt:message key="welcome.title"/>
-    </title>
+    <title>Welcome</title>
 
     <script type="text/javascript">
         <!--
@@ -20,7 +18,7 @@
                 var bid = $(".cdeck-active img").attr("title");
 
                 $(".act-count").html(time);
-                $(".act-bid").html('Last Bid Rs.' + bid + '/=');
+                $(".act-bid").html('Max Bid LKR. ' + bid);
                 $(".act-desc").html(iname);
             }
 
@@ -187,37 +185,22 @@
 
     <div id="cdlist">
         <div id="reel">
-            <div align="center" class="cdeck">
-                <img src="images/1.jpg" alt="picture">
-            </div>
-
-            <div align="center" class="cdeck-active">
-                <img src="images/2.jpg" title="4500" alt="6:23:45" name="Item description for pic 1">
-            </div>
 
             <div align="center" class="cdeck">
-                <img src="images/3.jpg" title="6600" alt="7:12:42" name="Item description for pic 2">
+                <img src="images/shoes.jpg" alt="picture">
             </div>
+            <c:if test="${listings != null}">
+                <c:forEach items="${listings}" var="listing">
 
-            <div align="center" class="cdeck">
-                <img src="images/4.jpg" title="7674" alt="2:55:34" name="Item description for pic 3">
-            </div>
+                    <div align="center" class="cdeck">
+                        <a href="<c:url value="/biditem.html"/>?lt=<c:out value="${listing.id}"/>">
+                            <img src="${listing.item.imagePath}" title="${listing.maxBid}" alt="${listing.remainingTime}" name="${listing.item.name}">
+                        </a>
+                    </div>
 
-            <div align="center" class="cdeck">
-                <img src="images/5.jpg" title="5665" alt="2:34:54" name="Item description for pic 4">
-            </div>
+                </c:forEach>
+            </c:if>
 
-            <div align="center" class="cdeck">
-                <img src="images/3.jpg" title="6600" alt="7:12:42" name="Item description for pic 2">
-            </div>
-
-            <div align="center" class="cdeck">
-                <img src="images/4.jpg" title="7674" alt="2:55:34" name="Item description for pic 3">
-            </div>
-
-            <div align="center" class="cdeck">
-                <img src="images/5.jpg" title="5665" alt="2:34:54" name="Item description for pic 4">
-            </div>
         </div>
 
         <div class="dwn-arrw"></div>
@@ -226,10 +209,10 @@
     <div class="clear"></div>
 
     <div id="act-content">
-        <div class="act-count">8:03:48</div>
-        <div class="act-bid">Last Bid Rs.5200/=</div>
+        <div class="act-count"></div>
+        <div class="act-bid"></div>
         <div class="clear"></div>
-        <div class="act-desc">Adidas men's running shoes Sandrest</div>
+        <div class="act-desc"></div>
     </div>
 
 </div>
