@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title><decorator:title/> | <fmt:message key="webapp.name"/></title>
+    <title><decorator:title/> | Notification API Demo</title>
     <!-- External CSS and JS files -->
 
     <link href="<c:url value="/styles/style.css"/>" rel="stylesheet" type="text/css"/>
