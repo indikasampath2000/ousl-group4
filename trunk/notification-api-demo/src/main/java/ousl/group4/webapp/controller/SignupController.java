@@ -22,6 +22,12 @@ public class SignupController {
     @Autowired
     private CountryManager countryManager;
 
+    /**
+     * initialize form with user object
+     *
+     * @param modelMap
+     * @return
+     */
     @RequestMapping(method = RequestMethod.GET)
     public String initForm(ModelMap modelMap) {
         User user = new User();
@@ -32,6 +38,11 @@ public class SignupController {
         return "signup";
     }
 
+    /**
+     * populate countries into select when form loading
+     *
+     * @return
+     */
     @ModelAttribute("countries")
     public List<String> populateCountries() {
         List<Country> result = countryManager.getAllCountries();
@@ -44,6 +55,11 @@ public class SignupController {
         return countries;
     }
 
+    /**
+     * populate secret questions into select when form loading
+     *
+     * @return
+     */
     @ModelAttribute("secretQuestions")
     public List<String> populateSecretQuestions() {
         List<String> quiz = new ArrayList<String>();
@@ -54,6 +70,11 @@ public class SignupController {
         return quiz;
     }
 
+    /**
+     * populate gender into radio button when form loading
+     *
+     * @return
+     */
     @ModelAttribute("gender")
     public Map<String, String> populateGender() {
         Map<String, String> gender = new HashMap<String, String>();

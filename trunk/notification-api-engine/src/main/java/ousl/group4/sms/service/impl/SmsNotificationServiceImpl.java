@@ -7,11 +7,8 @@ import ousl.group4.sms.service.SmsRecipientsService;
 import ousl.group4.sms.service.SmsService;
 
 import java.io.*;
-import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.nio.charset.Charset;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;

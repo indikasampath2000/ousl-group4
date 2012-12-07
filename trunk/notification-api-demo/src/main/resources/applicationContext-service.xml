@@ -18,7 +18,7 @@
     <context:component-scan base-package="ousl.group4.service"/>
 
     <!-- Notification API integration  -->
-    <bean name="notificationJobRunner" class="ousl.group4.jobscheduler.NotificationJobRunner" init-method="initSendNotifications"/>
+    <bean name="notificationJobRunner" class="ousl.group4.jobscheduler.NotificationJobRunner" lazy-init="false" init-method="initSendNotifications"/>
     <bean name="mailSender" class="ousl.group4.email.service.impl.MailSenderImpl"/>
     <bean name="smsSender" class="ousl.group4.sms.service.impl.SmsSenderImpl"/>
 

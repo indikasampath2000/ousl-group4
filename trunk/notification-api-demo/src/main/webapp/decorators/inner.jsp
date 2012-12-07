@@ -23,13 +23,31 @@
         <div class="ui-state-default box_title_new">
             <div>
                 	<span> 
-                		<fmt:message key="test menu header"/>
+                        Buy
                 	</span>
             </div>
         </div>
         <div class="box_data" style="padding-top:5px;">
             <ul class="side_bar">
-                <li><a href="<c:url value=''/>"><fmt:message key="test menu item"/></a></li>
+                <li><a href="#">Watch List</a></li>
+                <li><a href="#">Bids</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Won</a></li>
+                <li><a href="#">Didn't win</a></li>
+            </ul>
+        </div>
+
+        <div class="ui-state-default box_title_new">
+            <div>
+                	<span>
+                		Administrator
+                	</span>
+            </div>
+        </div>
+        <div class="box_data" style="padding-top:5px;">
+            <ul class="side_bar">
+                <li><a href="<c:url value="/email-promotion.html"/>">Email Promotion</a></li>
+                <li><a href="<c:url value="/sms-promotion.html"/>">SMS Promotion</a></li>
             </ul>
         </div>
 
