@@ -55,7 +55,7 @@ public class TestNotificationApi {
                 {"janakasampath2000@gmail.com", MailSendType.SEND_TO},
                 {"chathurasampath2000@gmail.com", MailSendType.SEND_TO},*/
                 //{"indikasampath2000@gmail.com", MailSendType.SEND_TO},
-                //{"indikasampath2000@yahoo.com", MailSendType.SEND_TO},
+                {"indikasampath2000@yahoo.com", MailSendType.SEND_TO},
                 {"indika@respere.com", MailSendType.SEND_BCC}
         };
 
@@ -69,16 +69,16 @@ public class TestNotificationApi {
         mailMap.put("para", "Test velocity body with inline image");
         try {
 
-            /*for (int i = 0; i < mailAddress.length; i++) {
+            for (int i = 0; i < mailAddress.length; i++) {
                 mailMap.put(MailKeyBox.RECIPIENTS, new String[][]{{mailAddress[i][0], mailAddress[i][1]}});
                 // mail notification sender
-                //mailSender.send(mailMap);
+                mailSender.send(mailMap);
                 //mailSender.send(mailMap, "/test.vm");
                 //mailSender.scheduleMail(mailMap, mailSchedule);
                 //System.out.println(mailAddress[i][0] + " : " + mailAddress[i][1]);
             }
 
-            List<Mail> mails = mailService.getScheduleMailNotificationByMailSchedule(mailSchedule);
+            /*List<Mail> mails = mailService.getScheduleMailNotificationByMailSchedule(mailSchedule);
 
             for(Object o : mails){
                 Mail mail = (Mail) o;

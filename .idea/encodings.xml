@@ -14,6 +14,11 @@
     <file url="file://$PROJECT_DIR$/notification-api-core/src/main/resources/jdbc.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification-api-core/src/main/resources/log4j.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification-api-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-api-engine/src/main/resources/hibernate.cfg.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-api-engine/src/main/resources/notification-api-sms.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-api-engine/src/main/resources/notification-api-smtp.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-api-engine/src/main/resources/quartz.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-api-engine/src/main/resources/test.vm" charset="UTF-8" />
   </component>
 </project>
 

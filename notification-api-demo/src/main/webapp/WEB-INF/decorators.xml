@@ -21,6 +21,8 @@
 
     <decorator name="inner" page="inner.jsp">
         <pattern>/home.html*</pattern>
+        <pattern>/email-promotion.html*</pattern>
+        <pattern>/sms-promotion.html*</pattern>
     </decorator>
 
 </decorators>

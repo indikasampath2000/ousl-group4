@@ -6,7 +6,7 @@
     <div class="menu">My Cyebid - Buy - Sell - Help - Contact us</div>
     <div class="clear"></div>
     <div class="copyright">
-        Copyright � ${copyright.year} CeyBid Lanka (Private) Limited. All Rights Reserved. Designated trademarks and
+        Copyright &copy; CeyBid Lanka (Private) Limited. All Rights Reserved. Designated trademarks and
         brands are the property of their respective owners. Use of this Web site constitutes acceptance of the CeyBid
         User Agreement and Privacy Policy.
     </div>

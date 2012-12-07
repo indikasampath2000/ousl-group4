@@ -16,6 +16,7 @@ public class NotificationJobRunner {
      * @throws SchedulerException
      */
     public void initSendNotifications() throws SchedulerException {
+
         // Retrieve a scheduler from schedule factory
         Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
         // Start scheduler

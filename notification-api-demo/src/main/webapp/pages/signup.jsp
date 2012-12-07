@@ -11,7 +11,7 @@
 
     <!-- Start content area 1 -->
     <div class="content-area-signup">
-        <form:form action="/signup-success.jsp" modelAttribute="user">
+        <form:form method="post" modelAttribute="user">
             <div class="account-info-area">
                 <table width="460" border="0" cellpadding="3" cellspacing="0">
                     <tr>

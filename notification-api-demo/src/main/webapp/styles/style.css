@@ -1058,3 +1058,8 @@ a img {
     border: 1px solid #CCCCCC;
 }
 
+.sms-message-box{
+    width: 708px;
+    height: 300px;
+}
+
