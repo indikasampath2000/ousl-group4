@@ -11,6 +11,7 @@
     <decorator name="welcome" page="welcome.jsp">
         <pattern>/welcome.html*</pattern>
         <pattern>/signup.html*</pattern>
+        <pattern>/signupComplete.html*</pattern>
     </decorator>
 
     <decorator name="outer" page="outer.jsp">
@@ -23,6 +24,8 @@
         <pattern>/home.html*</pattern>
         <pattern>/email-promotion.html*</pattern>
         <pattern>/sms-promotion.html*</pattern>
+        <pattern>/createEmailPromotion.html*</pattern>
+        <pattern>/createSmsPromotion.html*</pattern>
     </decorator>
 
 </decorators>

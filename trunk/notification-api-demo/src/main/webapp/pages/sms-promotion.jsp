@@ -38,26 +38,30 @@
             <div><span>Notification API Promotion Campaign</span></div>
         </div>
         <div class="ui-corner-bottom box_data" style="padding:5px 2px 5px 10px;">
-            <form:form method="post" action="" modelAttribute="promotionCampaign">
+            <form:form method="post" action="createSmsPromotion.html" modelAttribute="promotionCampaign" enctype="multipart/form-data">
+                <form:hidden path="type" />
                 <table width="100%" border="0" cellspacing="0" cellpadding="3">
                     <tr>
                         <td class="log-text-style2" width="20%">Users</td>
                         <td class="log-text-style2">
-                            <form:radiobutton path="user" value="R"/>Registered
-                            <form:radiobutton path="user" value="U"/>Unregistered
+                            <form:radiobutton path="user" value="R" label="Registered"/>
+                            <form:radiobutton path="user" value="U" label="Unregistered"/><br/>
+                            <span><form:errors path="user" cssClass="error" /></span>
                         </td>
                     </tr>
                     <tr>
                         <td width="20%"></td>
                         <td>
                             <div id="uploadUserList" style="display: none;">
-                                <input type="file" path="spreadsheet" size="40" />
+                                <input type="file" name="spreadsheet" size="40" /> (.xls file)<br/>
+                                <span><form:errors path="spreadsheet" cssClass="error" /></span>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <form:textarea path="message" cssClass="sms-message-box"/>
+                            <span><form:errors path="message" cssClass="error" /></span>
                         </td>
                     </tr>
                     <tr>

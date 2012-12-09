@@ -42,14 +42,16 @@ public class SmsNotificationJob implements Job{
             smsQueue.startAllThreads();
             try {
                 smsAssignerThread.join();
+                int tasksDone = smsQueue.stopWhenAllTaskFinished();
+                long endTime = System.currentTimeMillis();
+                System.out.println("Total Time (sms) : " + (endTime - startTime));
+                System.out.println("Number of Tasks Executed (sms) : " + tasksDone);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            } finally {
+                smsQueue = null;
+                smsAssignerThread = null;
             }
-            int tasksDone = smsQueue.stopWhenAllTaskFinished();
-            long endTime = System.currentTimeMillis();
-            System.out.println("Total Time (sms) : " + (endTime - startTime));
-            System.out.println("Number of Tasks Executed (sms) : " + tasksDone);
-
         }
     }
 }

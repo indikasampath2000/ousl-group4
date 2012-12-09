@@ -132,6 +132,7 @@ public class User implements Serializable, UserDetails {
         this.gender = gender;
     }
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "dob")
     public Date getDob() {
         return dob;

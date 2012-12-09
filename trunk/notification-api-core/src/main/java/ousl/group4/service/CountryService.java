@@ -4,7 +4,7 @@ import ousl.group4.model.Country;
 
 import java.util.List;
 
-public interface CountryManager {
+public interface CountryService {
 
     public List<Country> getAllCountries();
 

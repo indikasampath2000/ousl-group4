@@ -885,7 +885,7 @@ a img {
 
 .reg-text-style3 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 20px;
     color: #669900;
     font-weight: bold;
 }
@@ -894,6 +894,12 @@ a img {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     color: #666;
+}
+
+.error{
+    font-size: 11px;
+    color: #ff0000;
+    font-weight: bold;
 }
 
 .log-text-style1 {

@@ -77,11 +77,10 @@ public class SmsNotificationServiceImpl implements SmsNotificationService {
                     smsRecipientsService.updateSmsRecipients(receiver);
                 }
 
-                receiver = null;
-                result = "";
-
                 System.out.println(result + " to - " + receiver.getRecipientMobileNumber());
 
+                receiver = null;
+                result = "";
             }
         } catch (IOException e) {
             failCounter = failCounter + 1;

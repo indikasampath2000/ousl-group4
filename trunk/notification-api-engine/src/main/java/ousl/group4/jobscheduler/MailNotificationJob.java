@@ -42,13 +42,17 @@ public class MailNotificationJob implements Job {
             mailQueue.startAllThreads();
             try {
                 mailAssignerThread.join();
+                int tasksDone = mailQueue.stopWhenAllTaskFinished();
+                long endTime = System.currentTimeMillis();
+                System.out.println("Total Time (email) : " + (endTime - startTime));
+                System.out.println("Number of Tasks Executed (email) : " + tasksDone);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            } finally {
+                mailQueue = null;
+                mailAssignerThread = null;
             }
-            int tasksDone = mailQueue.stopWhenAllTaskFinished();
-            long endTime = System.currentTimeMillis();
-            System.out.println("Total Time (email) : " + (endTime - startTime));
-            System.out.println("Number of Tasks Executed (email) : " + tasksDone);
+
 
         }
     }
