@@ -1,26 +1,29 @@
 package ousl.group4.webapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 import ousl.group4.model.Country;
 import ousl.group4.model.User;
-import ousl.group4.service.CountryManager;
+import ousl.group4.service.CountryService;
+import ousl.group4.webapp.validator.UserValidator;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Controller
-@RequestMapping("/signup.html")
+@SessionAttributes(value = "user")
 public class SignupController {
 
     @Autowired
-    private CountryManager countryManager;
+    private CountryService countryService;
+    @Autowired
+    private UserValidator userValidator;
 
     /**
      * initialize form with user object
@@ -28,14 +31,34 @@ public class SignupController {
      * @param modelMap
      * @return
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/signup.html", method = RequestMethod.GET)
     public String initForm(ModelMap modelMap) {
         User user = new User();
-        user.setGender('M');
         user.setAddressLine3("Sri Lanka");
 
         modelMap.addAttribute("user", user);
         return "signup";
+    }
+
+    /**
+     * persist user and generate notification with instructions to enable account
+     *
+     * @return
+     */
+    @RequestMapping(value = "/signupComplete.html", method = RequestMethod.POST)
+    public String processSubmit(@ModelAttribute("user")User user, BindingResult bindingResult, SessionStatus sessionStatus){
+
+        userValidator.validate(user, bindingResult);
+
+        if(bindingResult.hasErrors()){
+            // validation fails
+            return "signup";
+        }else {
+            sessionStatus.setComplete();
+            // validation pass
+            return "signup-success";
+        }
+
     }
 
     /**
@@ -45,7 +68,7 @@ public class SignupController {
      */
     @ModelAttribute("countries")
     public List<String> populateCountries() {
-        List<Country> result = countryManager.getAllCountries();
+        List<Country> result = countryService.getAllCountries();
 
         List<String> countries = new ArrayList<String>();
         for (Object o : result) {
@@ -70,17 +93,11 @@ public class SignupController {
         return quiz;
     }
 
-    /**
-     * populate gender into radio button when form loading
-     *
-     * @return
-     */
-    @ModelAttribute("gender")
-    public Map<String, String> populateGender() {
-        Map<String, String> gender = new HashMap<String, String>();
-        gender.put("M", "Male");
-        gender.put("F", "Female");
-        return gender;
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
+        binder.setValidator(userValidator);
     }
 
 }

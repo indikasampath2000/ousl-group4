@@ -29,7 +29,7 @@
                 </tr>
                 <tr>
                     <td height="35">&nbsp;</td>
-                    <td colspan="2"><span class="reg-text-style3">Please register as a CeyBid Family Member and enjoy privileges including</span>:
+                    <td colspan="2"><span class="log-text-style3">Please register as a CeyBid Family Member and enjoy privileges including</span>:
                     </td>
                 </tr>
                 <tr>

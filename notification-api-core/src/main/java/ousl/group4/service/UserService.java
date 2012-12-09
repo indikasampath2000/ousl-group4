@@ -4,7 +4,7 @@ import ousl.group4.model.User;
 
 import java.util.List;
 
-public interface UserManager {
+public interface UserService {
 
     /**
      * @param userId

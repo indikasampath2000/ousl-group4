@@ -5,13 +5,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ousl.group4.dao.UserDao;
 import ousl.group4.model.User;
-import ousl.group4.service.UserManager;
+import ousl.group4.service.UserService;
 
 import java.util.List;
 
 @Service("userManager")
 @Transactional
-public class UserManagerImpl implements UserManager {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;

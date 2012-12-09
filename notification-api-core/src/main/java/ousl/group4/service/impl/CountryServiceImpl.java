@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ousl.group4.dao.CountryDao;
 import ousl.group4.model.Country;
-import ousl.group4.service.CountryManager;
+import ousl.group4.service.CountryService;
 
 import java.util.List;
 
 @Service("countryManager")
-public class CountryManagerImpl implements CountryManager {
+public class CountryServiceImpl implements CountryService {
 
     @Autowired
     private CountryDao countryDao;

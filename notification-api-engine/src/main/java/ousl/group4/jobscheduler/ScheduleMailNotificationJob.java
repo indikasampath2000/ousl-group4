@@ -51,13 +51,17 @@ public class ScheduleMailNotificationJob implements Job{
             mailQueue.startAllThreads();
             try {
                 mailAssignerThread.join();
+                int tasksDone = mailQueue.stopWhenAllTaskFinished();
+                long endTime = System.currentTimeMillis();
+                System.out.println("Total Time (mail) : " + (endTime - startTime));
+                System.out.println("Number of Tasks Executed (mail) : " + tasksDone);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            } finally {
+                mailQueue = null;
+                mailAssignerThread = null;
             }
-            int tasksDone = mailQueue.stopWhenAllTaskFinished();
-            long endTime = System.currentTimeMillis();
-            System.out.println("Total Time (mail) : " + (endTime - startTime));
-            System.out.println("Number of Tasks Executed (mail) : " + tasksDone);
+
         }
     }
 }

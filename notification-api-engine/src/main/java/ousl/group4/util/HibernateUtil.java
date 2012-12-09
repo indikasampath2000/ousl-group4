@@ -26,6 +26,12 @@ public class HibernateUtil {
             properties.setProperty("hibernate.connection.username", "sa");
             properties.setProperty("hibernate.connection.password", "");
             properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+            properties.setProperty("hibernate.c3p0.acquire_increment", "1");
+            properties.setProperty("hibernate.c3p0.idle_test_period", "100");
+            properties.setProperty("hibernate.c3p0.max_size", "100");
+            properties.setProperty("hibernate.c3p0.max_statements", "0");
+            properties.setProperty("hibernate.c3p0.min_size", "10");
+            properties.setProperty("hibernate.c3p0.timeout", "100");
             //properties.setProperty("hibernate.hbm2ddl.auto", "update");
             Configuration configuration = new Configuration();
             configuration.configure()

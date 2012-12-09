@@ -28,6 +28,11 @@ public class WelcomeController {
 
     }
 
+    /**
+     * load listing to display in carousel
+     *
+     * @return
+     */
     @ModelAttribute("listings")
     public List<Listing> populateListing(){
         List<Listing> listings = new ArrayList<Listing>();
@@ -55,13 +60,5 @@ public class WelcomeController {
             listings.add(listing);
         }
         return listings;
-    }
-
-    public String getTimeDiff(Date dateOne, Date dateTwo) {
-        String diff = "";
-        long timeDiff = Math.abs(dateOne.getTime() - dateTwo.getTime());
-        diff = String.format("%d hour(s) %d min(s)", TimeUnit.MILLISECONDS.toHours(timeDiff),
-                TimeUnit.MILLISECONDS.toMinutes(timeDiff) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(timeDiff)));
-        return diff;
     }
 }

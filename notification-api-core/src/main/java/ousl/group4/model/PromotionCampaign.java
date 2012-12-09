@@ -5,7 +5,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 public class PromotionCampaign {
-
     private String type;
     private String user;
     private String message;

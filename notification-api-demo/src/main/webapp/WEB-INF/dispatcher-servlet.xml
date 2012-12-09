@@ -42,6 +42,8 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
     <!-- Interceptors -->
     <mvc:interceptors>
         <bean class="ousl.group4.webapp.interceptor.AllPageInterceptor"/>
