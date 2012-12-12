@@ -16,7 +16,7 @@ public class MailInlineImagesDaoImpl implements MailInlineImagesDao {
      */
     @Override
     public List<MailInlineImages> getMailInlineImagesByMailId(Long mailId) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<MailInlineImages> inlineImagesList = session
@@ -28,7 +28,6 @@ public class MailInlineImagesDaoImpl implements MailInlineImagesDao {
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 }

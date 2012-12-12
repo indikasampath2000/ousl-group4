@@ -4,54 +4,54 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
+
 import ousl.group4.email.model.*;
 import ousl.group4.sms.model.Sms;
 import ousl.group4.sms.model.SmsRecipients;
 import ousl.group4.sms.model.SmsSchedule;
 
-import java.util.Properties;
-
 public class HibernateUtil {
 
-    private static SessionFactory sessionFactory;
-    private static ServiceRegistry serviceRegistry;
-    private static Properties properties;
+	private static final SessionFactory sessionFactory = buildSessionFactory();
 
-    public static SessionFactory getSessionFactory() {
-        try {
-
-            properties = new Properties();
-            properties.setProperty("hibernate.connection.driver_class", "org.h2.Driver");
-            properties.setProperty("hibernate.connection.url", "jdbc:h2:tcp://localhost/~/data/notification_api;MVCC=TRUE");
-            properties.setProperty("hibernate.connection.username", "sa");
-            properties.setProperty("hibernate.connection.password", "");
-            properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-            properties.setProperty("hibernate.c3p0.acquire_increment", "1");
-            properties.setProperty("hibernate.c3p0.idle_test_period", "100");
-            properties.setProperty("hibernate.c3p0.max_size", "100");
-            properties.setProperty("hibernate.c3p0.max_statements", "0");
-            properties.setProperty("hibernate.c3p0.min_size", "10");
-            properties.setProperty("hibernate.c3p0.timeout", "100");
-            //properties.setProperty("hibernate.hbm2ddl.auto", "update");
-            Configuration configuration = new Configuration();
-            configuration.configure()
+	private static SessionFactory buildSessionFactory() {
+		try {
+			// Create the SessionFactory
+			Configuration configuration = new Configuration()
+					.setProperty("hibernate.connection.driver_class", "org.h2.Driver")
+					.setProperty("hibernate.connection.url",
+							"jdbc:h2:tcp://localhost/~/data/notification_api;MVCC=TRUE")
+					.setProperty("hibernate.connection.username", "sa")
+					.setProperty("hibernate.connection.password", "")
+					.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect")
+					.setProperty("hibernate.current_session_context_class", "thread")
+                    .setProperty("hibernate.cache.provider_class", "org.hibernate.cache.NoCacheProvider")
+					// .setProperty("hibernate.hbm2ddl.auto", "update")
+					.setProperty("hibernate.c3p0.acquire_increment", "1")
+					.setProperty("hibernate.c3p0.idle_test_period", "15")
+                    .setProperty("hibernate.c3p0.max_size", "50")
+					.setProperty("hibernate.c3p0.max_statements", "0")
+                    .setProperty("hibernate.c3p0.min_size", "10")
+					.setProperty("hibernate.c3p0.timeout", "15")
                     .addAnnotatedClass(Mail.class)
-                    .addAnnotatedClass(MailAttachments.class)
+					.addAnnotatedClass(MailAttachments.class)
                     .addAnnotatedClass(MailRecipients.class)
-                    .addAnnotatedClass(MailInlineImages.class)
+					.addAnnotatedClass(MailInlineImages.class)
                     .addAnnotatedClass(MailSchedule.class)
-                    .addAnnotatedClass(Sms.class)
+					.addAnnotatedClass(Sms.class)
                     .addAnnotatedClass(SmsRecipients.class)
-                    .addAnnotatedClass(SmsSchedule.class);
+					.addAnnotatedClass(SmsSchedule.class);
+			final ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(
+					configuration.getProperties()).buildServiceRegistry();
+			return configuration.buildSessionFactory(serviceRegistry);
+		} catch (Throwable ex) {
+			// Make sure you log the exception, as it might be swallowed
+			System.err.println("Initial SessionFactory creation failed." + ex);
+			throw new ExceptionInInitializerError(ex);
+		}
+	}
 
-            serviceRegistry = new ServiceRegistryBuilder().applySettings(properties)
-                    .buildServiceRegistry();
-            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-            return sessionFactory;
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
+	public static SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
 }

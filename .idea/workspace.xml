@@ -2,53 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="21d1700e-07ce-4a66-869c-d8b91d5cccc4" name="Default" comment="sms receiver controller implemented&#10;c3p0 data source dependency added to notification api engine&#10;phone number decoder and sms decoder util implemented">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_jexcelapi_jxl_2_6_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_c3p0_4_1_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/PhoneNumberDecoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SpreadSheetUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/promotion-success.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup-success.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_1.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/CountryManager.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/CountryService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/UserManager.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/UserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/CountryManagerImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/CountryServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserManagerImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/notification_api_demo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/notification_api_demo_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/notification-api-core.iml" afterPath="$PROJECT_DIR$/notification-api-core/notification-api-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/pom.xml" afterPath="$PROJECT_DIR$/notification-api-core/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/User.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/resources/ApplicationResources_en.properties" afterPath="$PROJECT_DIR$/notification-api-core/src/main/resources/ApplicationResources_en.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/notification-api-demo.iml" afterPath="$PROJECT_DIR$/notification-api-demo/notification-api-demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/pom.xml" afterPath="$PROJECT_DIR$/notification-api-demo/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/WelcomeController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/WelcomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/UserValidator.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/UserValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/goodbye.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/goodbye.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/style.css" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/notification-api-engine.iml" afterPath="$PROJECT_DIR$/notification-api-engine/notification-api-engine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/pom.xml" afterPath="$PROJECT_DIR$/notification-api-engine/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/MailNotificationJob.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/MailNotificationJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleMailNotificationJob.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleMailNotificationJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleSmsNotificationJob.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleSmsNotificationJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/SmsNotificationJob.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/SmsNotificationJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsNotificationServiceImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsNotificationServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailAttachmentsDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailAttachmentsDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailInlineImagesDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailInlineImagesDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailRecipientsDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailRecipientsDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailScheduleDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailScheduleDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsRecipientsDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsRecipientsDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/util/HibernateUtil.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/util/HibernateUtil.java" />
     </list>
     <ignored path="ousl-group4.iws" />
@@ -116,39 +83,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SmsReceiveController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java">
+      <file leaf-file-name="TestNotificationApi.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="54" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmsNotificationJob.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/SmsNotificationJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="30" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HibernateUtil.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/util/HibernateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="64" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.7894737">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmsMessageDecoder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+            <state line="26" column="51" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.24021353">
               <folding />
             </state>
           </provider>
@@ -171,22 +109,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" />
-        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsNotificationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/PhoneNumberDecoder.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
-        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/SmsNotificationJob.java" />
-        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/MailNotificationJob.java" />
-        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleMailNotificationJob.java" />
-        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleSmsNotificationJob.java" />
-        <option value="$PROJECT_DIR$/notification-api-engine/pom.xml" />
         <option value="$PROJECT_DIR$/notification-api-demo/pom.xml" />
         <option value="$PROJECT_DIR$/notification-api-core/pom.xml" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsRecipientsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailAttachmentsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailInlineImagesDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailScheduleDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailRecipientsDaoImpl.java" />
         <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/util/HibernateUtil.java" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
       </list>
     </option>
   </component>
@@ -202,10 +140,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
     <option name="y" value="24" />
-    <option name="width" value="1294" />
-    <option name="height" value="759" />
+    <option name="width" value="1280" />
+    <option name="height" value="752" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -233,6 +170,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,124 +195,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobscheduler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -689,6 +518,272 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification-api-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ousl-group4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -697,16 +792,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ousl-group4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1043,7 +1128,11 @@
       <created>1354854854103</created>
       <updated>1354854854103</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sms receiver controller implemented&#10;c3p0 data source dependency added to notification api engine&#10;phone number decoder and sms decoder util implemented">
+      <created>1355036442101</created>
+      <updated>1355036442101</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1067,7 +1156,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="24" width="1294" height="759" extended-state="0" />
+    <frame x="0" y="24" width="1280" height="752" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1082,18 +1171,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.6705491" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32445922" sideWeight="0.99837923" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2150974" sideWeight="0.67554075" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.320598" sideWeight="0.9983766" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21022727" sideWeight="0.68053246" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31946754" sideWeight="0.9983766" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32445922" sideWeight="0.99837923" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1164,118 +1253,106 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/PhoneNumberDecoder.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationScheduler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="7" column="26" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/email/TaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/sms/SmsQueue.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/email/MailQueueImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="55" selection-end="55" vertical-scroll-proportion="0.056285176">
-          <folding />
-        </state>
+        <state line="118" column="0" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/sms/TaskController.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailNotificationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.11257035">
-          <folding />
-        </state>
+        <state line="120" column="0" selection-start="5554" selection-end="5554" vertical-scroll-proportion="1.3130435" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/sms/SmsAssignerThread.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsRecipientsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="16" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.7021661">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleSmsNotificationJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="18" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.39350182">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/ScheduleMailNotificationJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="42" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.8267148">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/MailNotificationJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="42" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.90794224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="342" selection-end="342" vertical-scroll-proportion="-2.2086957">
+        <state line="16" column="79" selection-start="494" selection-end="494" vertical-scroll-proportion="0.28695652">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="12" selection-start="2201" selection-end="2201" vertical-scroll-proportion="1.9826087">
+        <state line="101" column="79" selection-start="2889" selection-end="2889" vertical-scroll-proportion="2.426087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="79" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailScheduleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="32" selection-start="1628" selection-end="1628" vertical-scroll-proportion="1.2476895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailRecipientsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="79" selection-start="512" selection-end="512" vertical-scroll-proportion="0.32490975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailInlineImagesDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="79" selection-start="524" selection-end="524" vertical-scroll-proportion="0.32490975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="28" selection-start="1797" selection-end="1797" vertical-scroll-proportion="1.4869565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/dao/impl/MailAttachmentsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="79" selection-start="518" selection-end="518" vertical-scroll-proportion="0.31304348">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="54" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/jobscheduler/SmsNotificationJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="30" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.0">
+        <state line="17" column="80" selection-start="826" selection-end="826" vertical-scroll-proportion="0.26086956">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="21" selection-start="6981" selection-end="6981" vertical-scroll-proportion="0.8122744">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="21" selection-start="7249" selection-end="7432" vertical-scroll-proportion="0.89169675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="21" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.67509025">
+        <state line="9" column="96" selection-start="308" selection-end="308" vertical-scroll-proportion="0.20869565">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/util/HibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="64" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.7894737">
+        <state line="13" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.13043478">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="51" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.24021353">
           <folding />
         </state>
       </provider>

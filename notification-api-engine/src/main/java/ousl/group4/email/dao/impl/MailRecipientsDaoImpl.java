@@ -16,7 +16,7 @@ public class MailRecipientsDaoImpl implements MailRecipientsDao {
      */
     @Override
     public List<MailRecipients> getMailRecipientsByMailId(Long mailId) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<MailRecipients> recipientsList = session
@@ -28,7 +28,6 @@ public class MailRecipientsDaoImpl implements MailRecipientsDao {
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -37,7 +36,7 @@ public class MailRecipientsDaoImpl implements MailRecipientsDao {
      */
     @Override
     public void updateMailRecipients(MailRecipients mailRecipients) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.update(mailRecipients);
@@ -45,7 +44,6 @@ public class MailRecipientsDaoImpl implements MailRecipientsDao {
         } catch (Exception e) {
             session.getTransaction().rollback();
         } finally {
-            session.close();
         }
     }
 }

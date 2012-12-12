@@ -14,7 +14,7 @@ public class SmsRecipientsDaoImpl implements SmsRecipientsDao{
      */
     @Override
     public List<SmsRecipients> getSmsRecipientsBySmsId(Long smsId) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<SmsRecipients> recipientsList = session
@@ -26,7 +26,6 @@ public class SmsRecipientsDaoImpl implements SmsRecipientsDao{
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -35,17 +34,15 @@ public class SmsRecipientsDaoImpl implements SmsRecipientsDao{
      */
     @Override
     public void updateSmsRecipients(SmsRecipients smsRecipients) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.update(smsRecipients);
             session.getTransaction().commit();
-            session.flush();
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
         } finally {
-            session.close();
         }
     }
 }
