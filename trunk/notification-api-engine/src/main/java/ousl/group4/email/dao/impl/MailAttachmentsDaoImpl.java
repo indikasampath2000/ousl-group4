@@ -16,7 +16,7 @@ public class MailAttachmentsDaoImpl implements MailAttachmentsDao {
      */
     @Override
     public List<MailAttachments> getMailAttachmentsByMailId(Long mailId) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<MailAttachments> mailAttachmentsList = session
@@ -28,7 +28,6 @@ public class MailAttachmentsDaoImpl implements MailAttachmentsDao {
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 }

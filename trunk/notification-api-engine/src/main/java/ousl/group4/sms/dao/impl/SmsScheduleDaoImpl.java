@@ -15,19 +15,17 @@ public class SmsScheduleDaoImpl implements SmsScheduleDao{
      */
     @Override
     public SmsSchedule saveMailSchedule(SmsSchedule smsSchedule) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.save(smsSchedule);
             session.getTransaction().commit();
-            session.flush();
             return smsSchedule;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -39,7 +37,7 @@ public class SmsScheduleDaoImpl implements SmsScheduleDao{
      */
     @Override
     public SmsSchedule isScheduleJobExist(String jobName) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             SmsSchedule mailSchedule = (SmsSchedule)session
@@ -51,7 +49,6 @@ public class SmsScheduleDaoImpl implements SmsScheduleDao{
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 }

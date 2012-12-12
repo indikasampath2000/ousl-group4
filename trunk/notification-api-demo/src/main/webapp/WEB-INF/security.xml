@@ -13,10 +13,12 @@
     <http pattern="/scripts/**" security="none"/>
 
     <http auto-config="true" access-denied-page="/access-denied.jsp">
-        <intercept-url pattern="/welcome.html*"
-                       access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/welcome.html*" access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
         <intercept-url pattern="/goodbye.html*" access="ROLE_ANONYMOUS"/>
         <intercept-url pattern="/signup.html*" access="ROLE_ANONYMOUS"/>
+        <intercept-url pattern="/home.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/email-promotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/sms-promotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
 
 
         <form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?error=true"

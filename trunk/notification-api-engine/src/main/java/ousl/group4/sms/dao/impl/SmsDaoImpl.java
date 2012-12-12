@@ -17,19 +17,17 @@ public class SmsDaoImpl implements SmsDao{
      */
     @Override
     public Sms saveSms(Sms sms) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.save(sms);
             session.getTransaction().commit();
-            session.flush();
             return sms;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -39,19 +37,17 @@ public class SmsDaoImpl implements SmsDao{
      */
     @Override
     public Sms updateSms(Sms sms) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.update(sms);
             session.getTransaction().commit();
-            session.flush();
             return sms;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -61,19 +57,17 @@ public class SmsDaoImpl implements SmsDao{
      */
     @Override
     public Sms getSmsById(Long smsId) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             Sms sms = (Sms) session.get(Sms.class, smsId);
             session.getTransaction().commit();
-            session.flush();
             return sms;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -82,7 +76,7 @@ public class SmsDaoImpl implements SmsDao{
      */
     @Override
     public List<Sms> getPendingSmsNotifications() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<Sms> pendingSmsList = session.createCriteria(Sms.class)
@@ -96,7 +90,6 @@ public class SmsDaoImpl implements SmsDao{
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -106,7 +99,7 @@ public class SmsDaoImpl implements SmsDao{
      */
     @Override
     public List<Sms> getScheduleMailNotificationByMailSchedule(SmsSchedule smsSchedule) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<Sms> pendingSmsList = session.createCriteria(Sms.class)
@@ -122,7 +115,6 @@ public class SmsDaoImpl implements SmsDao{
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 }

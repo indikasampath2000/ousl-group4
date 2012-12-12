@@ -14,19 +14,17 @@ public class MailScheduleDaoImpl implements MailScheduleDao{
      */
     @Override
     public MailSchedule saveMailSchedule(MailSchedule mailSchedule) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.save(mailSchedule);
             session.getTransaction().commit();
-            session.flush();
             return mailSchedule;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -38,7 +36,7 @@ public class MailScheduleDaoImpl implements MailScheduleDao{
      */
     @Override
     public MailSchedule isScheduleJobExist(String jobName) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             MailSchedule mailSchedule = (MailSchedule)session.createCriteria(MailSchedule.class).add(Restrictions.eq("jobName", jobName)).uniqueResult();
@@ -49,7 +47,6 @@ public class MailScheduleDaoImpl implements MailScheduleDao{
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 }

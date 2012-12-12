@@ -17,6 +17,26 @@
         </param-value>
     </context-param>
 
+    <context-param>
+        <param-name>db.url</param-name>
+        <param-value>jdbc:h2:tcp://localhost/~/data/notification_api;MVCC=TRUE;DB_CLOSE_ON_EXIT=FALSE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.user</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.password</param-name>
+        <param-value></param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.tcpServer</param-name>
+        <param-value>-tcpAllowOthers</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.h2.server.web.DbStarter</listener-class>
+    </listener>
+
     <!-- Spring Security -->
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>

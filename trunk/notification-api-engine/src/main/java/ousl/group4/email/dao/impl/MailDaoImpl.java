@@ -19,19 +19,17 @@ public class MailDaoImpl implements MailDao {
      */
     @Override
     public Mail saveMail(Mail mail) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.save(mail);
             session.getTransaction().commit();
-            session.flush();
             return mail;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -41,19 +39,17 @@ public class MailDaoImpl implements MailDao {
      */
     @Override
     public Mail updateMail(Mail mail) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             session.update(mail);
             session.getTransaction().commit();
-            session.flush();
             return mail;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -63,19 +59,17 @@ public class MailDaoImpl implements MailDao {
      */
     @Override
     public Mail getMailById(Long mailId) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             Mail mail = (Mail) session.get(Mail.class, mailId);
             session.getTransaction().commit();
-            session.flush();
             return mail;
         } catch (Exception ex) {
             ex.printStackTrace();
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -84,7 +78,7 @@ public class MailDaoImpl implements MailDao {
      */
     @Override
     public List<Mail> getPendingMailNotifications() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<Mail> pendingMailList = session.createCriteria(Mail.class)
@@ -98,7 +92,6 @@ public class MailDaoImpl implements MailDao {
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 
@@ -108,7 +101,7 @@ public class MailDaoImpl implements MailDao {
      */
     @Override
     public List<Mail> getScheduleMailNotificationByMailSchedule(MailSchedule mailSchedule) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             List<Mail> pendingMailList = session.createCriteria(Mail.class)
@@ -124,7 +117,6 @@ public class MailDaoImpl implements MailDao {
             session.getTransaction().rollback();
             return null;
         } finally {
-            session.close();
         }
     }
 }
