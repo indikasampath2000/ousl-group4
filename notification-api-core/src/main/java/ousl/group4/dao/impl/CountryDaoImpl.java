@@ -10,7 +10,7 @@ import ousl.group4.model.Country;
 import java.util.List;
 
 @Repository("countryDao")
-public class CountryDaoHibernate implements CountryDao {
+public class CountryDaoImpl implements CountryDao {
 
     @Autowired
     private SessionFactory sessionFactory;

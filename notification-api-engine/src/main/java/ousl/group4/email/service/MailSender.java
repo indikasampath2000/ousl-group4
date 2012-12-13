@@ -1,7 +1,9 @@
 package ousl.group4.email.service;
 
+import java.util.List;
 import java.util.Map;
 
+import ousl.group4.email.model.Mail;
 import ousl.group4.exception.NotificationAPIException;
 import ousl.group4.email.model.MailSchedule;
 
@@ -61,4 +63,11 @@ public interface MailSender {
      * @throws ousl.group4.exception.NotificationAPIException
      */
     void scheduleMail(Map<String, Object> mailMap, String templatePath, MailSchedule mailSchedule) throws Exception;
+
+    /**
+     * This method return List object of finished mail notification
+     *
+     * @return
+     */
+    List<Mail> getFinishedMailNotifications();
 }

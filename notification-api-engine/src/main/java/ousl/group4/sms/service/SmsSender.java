@@ -1,8 +1,10 @@
 package ousl.group4.sms.service;
 
 import ousl.group4.exception.NotificationAPIException;
+import ousl.group4.sms.model.Sms;
 import ousl.group4.sms.model.SmsSchedule;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -29,4 +31,11 @@ public interface SmsSender {
      * @throws Exception
      */
     void scheduleMail(Map<String, Object> smsMap, SmsSchedule smsSchedule) throws NotificationAPIException;
+
+    /**
+     * This method return List object of finished Sms notification
+     *
+     * @return
+     */
+    List<Sms> getFinishedSmsNotifications();
 }

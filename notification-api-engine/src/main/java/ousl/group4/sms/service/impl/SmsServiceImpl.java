@@ -55,4 +55,12 @@ public class SmsServiceImpl implements SmsService{
     public List<Sms> getScheduleMailNotificationByMailSchedule(SmsSchedule smsSchedule) {
         return smsDao.getScheduleMailNotificationByMailSchedule(smsSchedule);
     }
+
+    /**
+     * @return
+     */
+    @Override
+    public List<Sms> getFinishedSmsNotifications() {
+        return smsDao.getFinishedSmsNotifications();
+    }
 }

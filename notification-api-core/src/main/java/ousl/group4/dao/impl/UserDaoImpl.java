@@ -13,7 +13,7 @@ import ousl.group4.model.User;
 import java.util.List;
 
 @Repository("userDao")
-public class UserDaoHibernate implements UserDao, UserDetailsService {
+public class UserDaoImpl implements UserDao, UserDetailsService {
 
     @Autowired
     private SessionFactory sessionFactory;

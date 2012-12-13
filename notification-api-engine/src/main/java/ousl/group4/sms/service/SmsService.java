@@ -40,4 +40,10 @@ public interface SmsService {
      * @return
      */
     List<Sms> getScheduleMailNotificationByMailSchedule(SmsSchedule smsSchedule);
+
+    /**
+     *
+     * @return
+     */
+    List<Sms> getFinishedSmsNotifications();
 }

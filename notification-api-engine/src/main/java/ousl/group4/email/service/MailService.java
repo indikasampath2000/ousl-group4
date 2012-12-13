@@ -30,4 +30,10 @@ public interface MailService {
      * @return
      */
     List<Mail> getScheduleMailNotificationByMailSchedule(MailSchedule mailSchedule);
+
+    /**
+     *
+     * @return
+     */
+    List<Mail> getFinishedMailNotifications();
 }

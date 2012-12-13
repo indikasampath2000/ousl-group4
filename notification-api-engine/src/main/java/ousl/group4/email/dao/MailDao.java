@@ -36,4 +36,11 @@ public interface MailDao {
      * @return
      */
     List<Mail> getScheduleMailNotificationByMailSchedule(MailSchedule mailSchedule);
+
+    /**
+     *
+     * @return
+     */
+    List<Mail> getFinishedMailNotifications();
+
 }
