@@ -72,7 +72,7 @@ public class TestNotificationApi {
             for (int i = 0; i < mailAddress.length; i++) {
                 mailMap.put(MailKeyBox.RECIPIENTS, new String[][]{{mailAddress[i][0], mailAddress[i][1]}});
                 // mail notification sender
-                mailSender.send(mailMap);
+                //mailSender.send(mailMap);
                 //mailSender.send(mailMap, "/test.vm");
                 //mailSender.scheduleMail(mailMap, mailSchedule);
                 //System.out.println(mailAddress[i][0] + " : " + mailAddress[i][1]);
