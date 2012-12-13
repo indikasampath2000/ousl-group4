@@ -206,4 +206,14 @@ public class SmsSenderImpl implements SmsSender {
         sms.setQueue(false);
         smsService.saveSms(sms);
     }
+
+    /**
+     * This method return List object of finished Sms notification
+     *
+     * @return List
+     */
+    @Override
+    public List<Sms> getFinishedSmsNotifications() {
+        return smsService.getFinishedSmsNotifications();
+    }
 }

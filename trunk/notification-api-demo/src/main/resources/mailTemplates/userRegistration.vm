@@ -1,0 +1,50 @@
+<table cellpadding="0" cellspacing="0">
+    <tr>
+        <td><img src="<cid:logo_x60>" alt="CeyBid"/></td>
+        <td valign="top" style="font-size:10px;color:#555; padding:0 0 0 10px;">
+            <b>CeyBid sent this message to $fullName ($userId).</b><br/>
+            Your registered name is included to show this message originated from CeyBid.
+        </td>
+    </tr>
+</table>
+
+<h2>$title</h2>
+
+<p>Dear $name,</p>
+
+<p>Good news! You're just few clicks away from completing your registration on CeyBid Community. Please click "Activate Now" below to proceed and you will be ready to start shopping on CeyBid in no time!</p>
+
+<div><h2><a href="$url">Activate Now</a></h2></div>
+
+<p><b>If the above link does not work:</b></p>
+
+<p>
+    Type in or copy and paste this link into your Web browser:<br/>
+    <a href="$url">$url</a></h2>
+</p>
+
+<p>If you need additional help, contact CeyBid's Customer Support or <a href="http://help.ceybid.com">Help</a></p>
+
+<hr/>
+
+<div style="font-size:10px; color:#555;">
+    <p>CeyBid sent this email to $email through the CeyBid platform.</p>
+
+    <p>Visit our <a href="$helpUrl/index.php?option=com_content&view=article&id=8&Itemid=11">Privacy Policy</a> and <a
+            href="$helpUrl/index.php?option=com_content&view=article&id=7&Itemid=10">User Agreement</a> if you have any
+        questions.</p>
+
+    <p>
+        Copyright &copy; 2010 CeyBid Lanka (Private) Limited. All Rights Reserved. Designated trademarks and brands are
+        the property of
+        their respective owners. CeyBid and the CeyBid logo are trademarks of CeyBid Lanka (Private) Limited.
+        <br/>
+        CeyBid Lanka (Private) Limited is located at 414 2/1, Nawala Road, Nawala-Rajagiriya, Sri Lanka.
+    </p>
+
+    <p>
+        Customer Services Hotlines:+94(0) 112 88 33 22 || +94(0) 112 88 33 25 || +94(0) 722 22 35 88
+    </p>
+    <h5>This is a post-only mailing. Replies to this message are not monitored or answered.</h5>
+</div>
+

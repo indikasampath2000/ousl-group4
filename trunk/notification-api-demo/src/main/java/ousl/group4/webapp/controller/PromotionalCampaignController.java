@@ -17,6 +17,8 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 
+import ousl.group4.email.model.MailKeyBox;
+import ousl.group4.email.model.MailSendType;
 import ousl.group4.email.service.MailSender;
 import ousl.group4.exception.NotificationAPIException;
 import ousl.group4.model.PromotionCampaign;
@@ -31,130 +33,139 @@ import ousl.group4.webapp.validator.PromotionalCampaignValidator;
 @SessionAttributes(value = "promotionCampaign")
 public class PromotionalCampaignController {
 
-	@Autowired
-	private UserService userService;
-	@Autowired
-	private PromotionalCampaignValidator promotionalCampaignValidator;
-	@Autowired
-	private MailSender mailSender;
-	@Autowired
-	private SmsSender smsSender;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private PromotionalCampaignValidator promotionalCampaignValidator;
+    @Autowired
+    private MailSender mailSender;
+    @Autowired
+    private SmsSender smsSender;
 
-	/**
-	 * initialize email campaign form
-	 * 
-	 * @param modelMap
-	 * @return
-	 */
-	@RequestMapping(method = RequestMethod.GET, value = "/email-promotion.html")
-	public String initEmailForm(ModelMap modelMap) {
-		PromotionCampaign promotionCampaign = new PromotionCampaign();
-		promotionCampaign.setType("email");
-		modelMap.addAttribute("promotionCampaign", promotionCampaign);
-		return "email-promotion";
-	}
+    /**
+     * initialize email campaign form
+     *
+     * @param modelMap
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/email-promotion.html")
+    public String initEmailForm(ModelMap modelMap) {
+        PromotionCampaign promotionCampaign = new PromotionCampaign();
+        promotionCampaign.setType("email");
+        modelMap.addAttribute("promotionCampaign", promotionCampaign);
+        return "email-promotion";
+    }
 
-	/**
-	 * initialize sms campaign form
-	 * 
-	 * @param modelMap
-	 * @return
-	 */
-	@RequestMapping(method = RequestMethod.GET, value = "/sms-promotion.html")
-	public String initSmsForm(ModelMap modelMap) {
-		PromotionCampaign promotionCampaign = new PromotionCampaign();
-		promotionCampaign.setType("sms");
-		modelMap.addAttribute("promotionCampaign", promotionCampaign);
-		return "sms-promotion";
-	}
+    /**
+     * initialize sms campaign form
+     *
+     * @param modelMap
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/sms-promotion.html")
+    public String initSmsForm(ModelMap modelMap) {
+        PromotionCampaign promotionCampaign = new PromotionCampaign();
+        promotionCampaign.setType("sms");
+        modelMap.addAttribute("promotionCampaign", promotionCampaign);
+        return "sms-promotion";
+    }
 
-	/**
-	 * create email campaign
-	 * 
-	 * @param promotionCampaign
-	 * @param bindingResult
-	 * @return
-	 */
-	@RequestMapping(method = RequestMethod.POST, value = "/createEmailPromotion.html")
-	public String processEmailPromotionForm(@ModelAttribute("promotionCampaign") PromotionCampaign promotionCampaign,
-			BindingResult bindingResult, SessionStatus sessionStatus) throws IOException {
-		promotionalCampaignValidator.validate(promotionCampaign, bindingResult);
-		if (bindingResult.hasErrors()) {
-			// validation fails
-			return "email-promotion";
-		} else {
-			List<String> recipientEmailAddress = new ArrayList<String>();
-			// if registered user selected
-			if (promotionCampaign.getUser().equalsIgnoreCase("R")) {
-				for (User user : userService.getUsers()) {
-					recipientEmailAddress.add(user.getEmail());
-				}
-			}
-			// if unregistered users selected
-			if (promotionCampaign.getUser().equalsIgnoreCase("U")) {
-				MultipartFile spreadSheet = promotionCampaign.getSpreadsheet();
-				recipientEmailAddress = SpreadSheetUtil.readSpreadSheet(spreadSheet.getInputStream());
-			}
-			// get attachments
-			List<String> attachmentPath = new ArrayList<String>();
-			for (MultipartFile multipartFile : promotionCampaign.getFiles()) {
-				if (multipartFile.getSize() > 0) {
-					String fileName = multipartFile.getOriginalFilename();
-					File file = new File("/tmp/" + fileName);
-					multipartFile.transferTo(file);
-					attachmentPath.add(file.getAbsolutePath());
-				}
-			}
-			String[] attachments = (String[]) attachmentPath.toArray(new String[attachmentPath.size()]);
-			// generate email
-			sessionStatus.setComplete();
-			// validation pass
-			return "promotion-success";
-		}
-	}
+    /**
+     * create email campaign
+     *
+     * @param promotionCampaign
+     * @param bindingResult
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST, value = "/createEmailPromotion.html")
+    public String processEmailPromotionForm(@ModelAttribute("promotionCampaign") PromotionCampaign promotionCampaign,
+                                            BindingResult bindingResult, SessionStatus sessionStatus) throws IOException {
+        promotionalCampaignValidator.validate(promotionCampaign, bindingResult);
+        if (bindingResult.hasErrors()) {
+            // validation fails
+            return "email-promotion";
+        } else {
+            List<String> recipientEmailAddress = new ArrayList<String>();
+            // if registered user selected
+            if (promotionCampaign.getUser().equalsIgnoreCase("R")) {
+                for (User user : userService.getUsers()) {
+                    recipientEmailAddress.add(user.getEmail());
+                }
+            }
+            // if unregistered users selected
+            if (promotionCampaign.getUser().equalsIgnoreCase("U")) {
+                MultipartFile spreadSheet = promotionCampaign.getSpreadsheet();
+                recipientEmailAddress = SpreadSheetUtil.readSpreadSheet(spreadSheet.getInputStream());
+            }
+            String[] mailAddresses = (String[]) recipientEmailAddress.toArray(new String[recipientEmailAddress.size()]);
+            String[][] recipients = new String[mailAddresses.length][2];
+            for (int i = 0; i < mailAddresses.length; i++) {
+                recipients[i][0] = mailAddresses[i];
+                recipients[i][1] = MailSendType.SEND_TO;
+            }
 
-	/**
-	 * create sms campaign
-	 * 
-	 * @param promotionCampaign
-	 * @param bindingResult
-	 * @return
-	 */
-	@RequestMapping(method = RequestMethod.POST, value = "/createSmsPromotion.html")
-	public String processSmsPromotionForm(@ModelAttribute("promotionCampaign") PromotionCampaign promotionCampaign,
-			BindingResult bindingResult, SessionStatus sessionStatus) throws IOException, NotificationAPIException {
-		promotionalCampaignValidator.validate(promotionCampaign, bindingResult);
-		if (bindingResult.hasErrors()) {
-			// validation fails
-			return "sms-promotion";
-		} else {
-			List<String> phoneNumbers = new ArrayList<String>();
-			// if registered user selected
-			if (promotionCampaign.getUser().equalsIgnoreCase("R")) {
-				for (User user : userService.getUsers()) {
-					phoneNumbers.add(user.getMobileNumber());
-				}
-			}
-			// if unregistered users selected
-			if (promotionCampaign.getUser().equalsIgnoreCase("U")) {
-				MultipartFile spreadSheet = promotionCampaign.getSpreadsheet();
-				phoneNumbers = SpreadSheetUtil.readSpreadSheet(spreadSheet.getInputStream());
-			}
-			// generate sms
-			Map<String, Object> smsMap = new HashMap<String, Object>();
-			smsMap.put(SmsKeyBox.SENDER, "0720260442");
-			smsMap.put(SmsKeyBox.RECIPIENTS, (String[]) phoneNumbers.toArray(new String[phoneNumbers.size()]));
-			smsMap.put(SmsKeyBox.SMS_BODY, promotionCampaign.getMessage());
-			smsSender.send(smsMap);
-			sessionStatus.setComplete();
-			// validation pass
-			return "promotion-success";
-		}
-	}
+            // get attachments
+            List<String> attachmentPath = new ArrayList<String>();
+            for (MultipartFile multipartFile : promotionCampaign.getFiles()) {
+                if (multipartFile.getSize() > 0) {
+                    String fileName = multipartFile.getOriginalFilename();
+                    File file = new File("/tmp/" + fileName);
+                    multipartFile.transferTo(file);
+                    attachmentPath.add(file.getAbsolutePath());
+                }
+            }
+            String[] attachments = (String[]) attachmentPath.toArray(new String[attachmentPath.size()]);
 
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		binder.setValidator(promotionalCampaignValidator);
-		binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
-	}
+
+            // generate email
+            sessionStatus.setComplete();
+            // validation pass
+            return "promotion-success";
+        }
+    }
+
+    /**
+     * create sms campaign
+     *
+     * @param promotionCampaign
+     * @param bindingResult
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST, value = "/createSmsPromotion.html")
+    public String processSmsPromotionForm(@ModelAttribute("promotionCampaign") PromotionCampaign promotionCampaign,
+                                          BindingResult bindingResult, SessionStatus sessionStatus) throws IOException, NotificationAPIException {
+        promotionalCampaignValidator.validate(promotionCampaign, bindingResult);
+        if (bindingResult.hasErrors()) {
+            // validation fails
+            return "sms-promotion";
+        } else {
+            List<String> phoneNumbers = new ArrayList<String>();
+            // if registered user selected
+            if (promotionCampaign.getUser().equalsIgnoreCase("R")) {
+                for (User user : userService.getUsers()) {
+                    phoneNumbers.add(user.getMobileNumber());
+                }
+            }
+            // if unregistered users selected
+            if (promotionCampaign.getUser().equalsIgnoreCase("U")) {
+                MultipartFile spreadSheet = promotionCampaign.getSpreadsheet();
+                phoneNumbers = SpreadSheetUtil.readSpreadSheet(spreadSheet.getInputStream());
+            }
+            // generate sms
+            Map<String, Object> smsMap = new HashMap<String, Object>();
+            smsMap.put(SmsKeyBox.SENDER, "0720260442");
+            smsMap.put(SmsKeyBox.RECIPIENTS, (String[]) phoneNumbers.toArray(new String[phoneNumbers.size()]));
+            smsMap.put(SmsKeyBox.SMS_BODY, promotionCampaign.getMessage());
+            smsSender.send(smsMap);
+            sessionStatus.setComplete();
+            // validation pass
+            return "promotion-success";
+        }
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.setValidator(promotionalCampaignValidator);
+        binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
+    }
 }

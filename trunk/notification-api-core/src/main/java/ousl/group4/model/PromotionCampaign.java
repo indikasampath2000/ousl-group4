@@ -2,13 +2,14 @@ package ousl.group4.model;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PromotionCampaign {
     private String type;
     private String user;
     private String message;
-    private List<MultipartFile> files;
+    private List<MultipartFile> files = new ArrayList<MultipartFile>();
     private MultipartFile spreadsheet;
 
     public String getType() {

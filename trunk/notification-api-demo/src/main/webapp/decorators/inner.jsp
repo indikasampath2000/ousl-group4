@@ -23,24 +23,23 @@
         <div class="ui-state-default box_title_new">
             <div>
                 	<span> 
-                        Buy
+                        Reports
                 	</span>
             </div>
         </div>
         <div class="box_data" style="padding-top:5px;">
             <ul class="side_bar">
-                <li><a href="#">Watch List</a></li>
-                <li><a href="#">Bids</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">Won</a></li>
-                <li><a href="#">Didn't win</a></li>
+                <li><a href="#">Sent Email Report</a></li>
+                <li><a href="#">Sent SMS Report</a></li>
+                <li><a href="#">Schedule Email Report</a></li>
+                <li><a href="#">Schedule SMS Report</a></li>
             </ul>
         </div>
 
         <div class="ui-state-default box_title_new">
             <div>
                 	<span>
-                		Administrator
+                		Promotions
                 	</span>
             </div>
         </div>

@@ -708,5 +708,15 @@ public class MailSenderImpl implements MailSender {
         mailService.saveMail(mail);
     }
 
+    /**
+     * This method return List object of finished mail notification
+     *
+     * @return
+     */
+    @Override
+    public List<Mail> getFinishedMailNotifications() {
+        return mailService.getFinishedMailNotifications();
+    }
+
 
 }
