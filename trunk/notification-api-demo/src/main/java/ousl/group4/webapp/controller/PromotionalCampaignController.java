@@ -168,4 +168,32 @@ public class PromotionalCampaignController {
         binder.setValidator(promotionalCampaignValidator);
         binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
     }
+
+    @ModelAttribute("hours")
+    public List<Integer> populateHours(){
+        List<Integer> hours = new ArrayList<Integer>();
+        for(int i=0; i<24; i++){
+            hours.add(i);
+        }
+        return hours;
+    }
+
+    @ModelAttribute("minutes")
+    public List<Integer> populateMinutes(){
+        List<Integer> minutes = new ArrayList<Integer>();
+        for(int i=0; i<60; i++){
+            minutes.add(i);
+        }
+        return minutes;
+    }
+
+    @ModelAttribute("seconds")
+    public List<Integer> populateSeconds(){
+        List<Integer> seconds = new ArrayList<Integer>();
+        for(int i=0; i<60; i++){
+            seconds.add(i);
+        }
+        return seconds;
+    }
+
 }

@@ -66,5 +66,8 @@ public class PromotionalCampaignValidator implements Validator{
                 }
             }
         }
+        if(promotionCampaign.getSchedule()){
+            ValidationUtils.rejectIfEmptyOrWhitespace(errors, "scheduleDate", "promotion.err.email.scheduleDate", "Field is empty");
+        }
     }
 }
