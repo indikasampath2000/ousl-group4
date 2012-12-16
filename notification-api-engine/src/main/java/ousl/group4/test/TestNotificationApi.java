@@ -23,13 +23,13 @@ public class TestNotificationApi {
 
     public static void main(String[] args) {
         MailSender mailSender = new MailSenderImpl();
-        MailScheduleService mailScheduleService = new MailScheduleServiceImpl();
+        //MailScheduleService mailScheduleService = new MailScheduleServiceImpl();
         SmsSender smsSender = new SmsSenderImpl();
 
 
         // create mail schedule job
         String jobName = "todayJob2";
-        MailSchedule mailSchedule = mailScheduleService.isScheduleJobExist(jobName);
+        MailSchedule mailSchedule = mailSender.isScheduleJobExist(jobName);
         if(mailSchedule == null){
             mailSchedule = new MailSchedule();
             mailSchedule.setJobName(jobName);
@@ -44,7 +44,7 @@ public class TestNotificationApi {
             calendar.set(Calendar.MONTH, 10);
             calendar.set(Calendar.YEAR, 2012);
             mailSchedule.setScheduleDateTime(calendar.getTime());
-            mailScheduleService.saveMailSchedule(mailSchedule);
+            mailSender.saveMailSchedule(mailSchedule);
         }
 
         String[][] mailAddress = {

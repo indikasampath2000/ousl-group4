@@ -76,4 +76,19 @@ public interface MailSender {
      * @return
      */
     List<Mail> getAllScheduleMailNotifications();
+
+    /**
+     * return MailSchedule object if job already exist
+     *
+     * @param jobName
+     * @return
+     */
+    MailSchedule isScheduleJobExist(String jobName);
+
+    /**
+     * persist mail schedule
+     *
+     * @param mailSchedule
+     */
+    void saveMailSchedule(MailSchedule mailSchedule);
 }

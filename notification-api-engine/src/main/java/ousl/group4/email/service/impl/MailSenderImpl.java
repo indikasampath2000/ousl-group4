@@ -22,6 +22,7 @@ import ousl.group4.jobscheduler.ScheduleMailNotificationJob;
 public class MailSenderImpl implements MailSender {
 
     private MailService mailService = new MailServiceImpl();
+    private MailScheduleService mailScheduleService = new MailScheduleServiceImpl();
 
     /**
      * @param mailMap Must contains the below key names with relevant values
@@ -724,6 +725,27 @@ public class MailSenderImpl implements MailSender {
     @Override
     public List<Mail> getAllScheduleMailNotifications() {
         return mailService.getAllScheduleMailNotifications();
+    }
+
+    /**
+     * return MailSchedule object if job already exist
+     *
+     * @param jobName
+     * @return
+     */
+    @Override
+    public MailSchedule isScheduleJobExist(String jobName) {
+        return mailScheduleService.isScheduleJobExist(jobName);
+    }
+
+    /**
+     * persist mail schedule
+     *
+     * @param mailSchedule
+     */
+    @Override
+    public void saveMailSchedule(MailSchedule mailSchedule) {
+        mailScheduleService.saveMailSchedule(mailSchedule);
     }
 
 
