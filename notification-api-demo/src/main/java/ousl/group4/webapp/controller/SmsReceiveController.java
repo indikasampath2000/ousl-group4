@@ -14,6 +14,7 @@ import ousl.group4.sms.service.SmsSender;
 import ousl.group4.webapp.util.PhoneNumberDecoder;
 import ousl.group4.webapp.util.SmsMessageDecoder;
 
+import java.math.BigDecimal;
 import java.security.PrivateKey;
 import java.util.HashMap;
 import java.util.List;
@@ -39,11 +40,16 @@ public class SmsReceiveController {
         StringTokenizer tokenizer = new StringTokenizer(sms);
         String keyword = null;
         String searchBidItems="";
+        String bidSms =  null;
 
         while (tokenizer.hasMoreElements()) {
             keyword = (String) tokenizer.nextElement();
             if (keyword.equalsIgnoreCase("list")) {
                 break;
+            }
+            if (keyword.equalsIgnoreCase("bid")){
+                bidSms = sms;
+                System.out.println(bidSms);
             }
         }
 
@@ -67,8 +73,48 @@ public class SmsReceiveController {
             } catch (NotificationAPIException e) {
                 e.printStackTrace();
             }
-
         }
+        String listingId  = null;
+        String listingPrice=null;
+        StringTokenizer stringTokenizer1 = new StringTokenizer(bidSms);
+        while (stringTokenizer1.hasMoreElements()){
+            if (stringTokenizer1.nextElement().toString().equalsIgnoreCase("bid")){
+                listingId = (String) stringTokenizer1.nextElement();
+                listingPrice= (String) stringTokenizer1.nextElement();
+                break;
+            }
+        }
+        Listing listing = listingService.getListingById(Long.parseLong(listingId));
+        if (listing.getMaxBid().doubleValue() < Double.parseDouble(listingPrice))
+        {
+            listing.setMaxBid(new BigDecimal(Double.parseDouble(listingPrice)));
+            listingService.saveListing(listing);
+
+            Map<String, Object> smsMap = new HashMap<String, Object>();
+            smsMap.put(SmsKeyBox.SENDER, "0720260442");
+            smsMap.put(SmsKeyBox.RECIPIENTS, new String[]{mobileNumber});
+            smsMap.put(SmsKeyBox.SMS_BODY, "Congratulation ! You are the Max bidder.");
+
+            try {
+                smsSender.send(smsMap);
+            } catch (NotificationAPIException e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            Map<String, Object> smsMap = new HashMap<String, Object>();
+            smsMap.put(SmsKeyBox.SENDER, "0720260442");
+            smsMap.put(SmsKeyBox.RECIPIENTS, new String[]{mobileNumber});
+            smsMap.put(SmsKeyBox.SMS_BODY, "Sorry ! You are out bidded.");
+
+            try {
+                smsSender.send(smsMap);
+            } catch (NotificationAPIException e) {
+                e.printStackTrace();
+            }
+        }
+
 
     }
 
