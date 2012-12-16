@@ -6,6 +6,8 @@
     <!-- External CSS and JS files -->
 
     <link href="<c:url value="/styles/style.css"/>" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="<c:url value="/styles/displaytag.css"/>" type="text/css" />
+    <link rel="stylesheet" href="<c:url value="/styles/grid.css"/>" type="text/css" />
     <script src="<c:url value="/scripts/jquery-1.3.2.min.js" />" type="text/javascript"></script>
 
     <decorator:head/>

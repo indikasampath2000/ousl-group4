@@ -14,9 +14,10 @@
             <div><span></span>Sent Email Report</div>
         </div>
         <div class="ui-corner-bottom box_data" style="padding:5px 2px 5px 10px;">
-            <display:table name="sentMails" id="sentMail" requestURI="sentEmailReport.html" >
+            <display:table name="sentMails" id="sentMail" pagesize="10" cellspacing="0"
+                           cellpadding="0" requestURI="" class="table" export="true" >
                 <display:column property="mailSubject" title="Subject" sortable="true" />
-                <display:column property="mailSentTime" title="Sent Time" sortable="true" />
+                <display:column property="mailSentTime" format="{0,date,yyyy-MM-dd}" title="Sent Date" sortable="true" />
                 <display:column title="No. of recipients">
                     ${fn:length(sentMail.mailRecipients)}
                 </display:column>

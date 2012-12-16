@@ -86,6 +86,12 @@
                 <form:hidden path="type"/>
                 <table width="100%" border="0" cellspacing="0" cellpadding="3">
                     <tr>
+                        <td class="log-text-style2" width="20%">Subject</td>
+                        <td class="log-text-style2">
+                            <form:input path="subject" size="40"/>
+                        </td>
+                    </tr>
+                    <tr>
                         <td class="log-text-style2" width="20%">Users</td>
                         <td class="log-text-style2">
                             <form:radiobutton path="user" value="R" label="Registered"/>
@@ -113,6 +119,7 @@
                         <td class="log-text-style2" width="20%"></td>
                         <td class="log-text-style2">
                             <div id="scheduleTimer" style="display: none;">
+                                job name <form:input path="jobName"/> <br/>
                                 date <form:input path="scheduleDate" id="datepicker"/>
                                 hour <form:select path="hour" items="${hours}"/>
                                 minute <form:select path="minute" items="${minutes}"/>

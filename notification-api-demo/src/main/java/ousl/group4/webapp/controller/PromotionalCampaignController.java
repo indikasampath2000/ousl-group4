@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 
 import ousl.group4.email.model.MailKeyBox;
+import ousl.group4.email.model.MailSchedule;
 import ousl.group4.email.model.MailSendType;
 import ousl.group4.email.service.MailSender;
 import ousl.group4.exception.NotificationAPIException;
@@ -115,8 +116,48 @@ public class PromotionalCampaignController {
             }
             String[] attachments = (String[]) attachmentPath.toArray(new String[attachmentPath.size()]);
 
-
             // generate email
+            Map<String, Object> mailMap = new HashMap<String, Object>();
+            mailMap.put(MailKeyBox.SENDER, "ouslgroup4@gmail.com");
+            mailMap.put(MailKeyBox.SUBJECT, promotionCampaign.getSubject());
+            mailMap.put(MailKeyBox.MAIL_BODY, promotionCampaign.getMessage());
+            mailMap.put(MailKeyBox.ATTACHMENTS, attachments);
+            mailMap.put(MailKeyBox.RECIPIENTS, recipients);
+
+            //if not select schedule
+            if(!promotionCampaign.getSchedule()){
+                try {
+                    mailSender.send(mailMap);
+                } catch (NotificationAPIException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                MailSchedule mailSchedule = mailSender.isScheduleJobExist(promotionCampaign.getJobName());
+                if(mailSchedule == null){
+                    mailSchedule = new MailSchedule();
+                    mailSchedule.setJobName(promotionCampaign.getJobName());
+                    mailSchedule.setScheduleType(MailKeyBox.FIRE_ONCE);
+                    Date date = promotionCampaign.getScheduleDate();
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.setTime(date);
+                    calendar.set(Calendar.SECOND, promotionCampaign.getSecond());
+                    calendar.set(Calendar.MINUTE, promotionCampaign.getMinute());
+                    calendar.set(Calendar.HOUR_OF_DAY, promotionCampaign.getHour());
+                    calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH));
+                    calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
+                    calendar.set(Calendar.YEAR, calendar.get(Calendar.YEAR));
+                    mailSchedule.setScheduleDateTime(calendar.getTime());
+                    mailSender.saveMailSchedule(mailSchedule);
+
+                    try {
+                        mailSender.scheduleMail(mailMap, mailSchedule);
+                    } catch (NotificationAPIException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+
             sessionStatus.setComplete();
             // validation pass
             return "promotion-success";

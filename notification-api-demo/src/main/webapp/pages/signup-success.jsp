@@ -20,7 +20,7 @@
             </div>
             <br/><br/>
             <div class="log-text-style2">
-                You will receive an email to test@test.com very shortly from our team. Please follow the instructions to enable your account.
+                You will receive an email to <b>${user.email}</b> very shortly from our team. Please follow the instructions to enable your account.
             </div>
         </div>
     </div>

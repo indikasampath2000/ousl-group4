@@ -35,7 +35,7 @@ public class ReportController {
         System.out.println(sentSmses.size());
         modelMap.addAttribute("sentSmses", sentSmses);
 
-        return "sent-email-report";
+        return "sent-sms-report";
     }
 
 

@@ -35,6 +35,11 @@ public class PromotionalCampaignValidator implements Validator{
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "message", "promotion.err.message", "Field is empty");
 
         PromotionCampaign promotionCampaign = (PromotionCampaign) o;
+
+        if(promotionCampaign.getType().equalsIgnoreCase("email")){
+            ValidationUtils.rejectIfEmptyOrWhitespace(errors, "subject", "promotion.err.subject", "Field is Empty");
+        }
+
         if(promotionCampaign.getUser() != null){
             if(promotionCampaign.getUser().equalsIgnoreCase("U")){
                 if(promotionCampaign.getSpreadsheet().getSize() == 0){
@@ -68,6 +73,7 @@ public class PromotionalCampaignValidator implements Validator{
         }
         if(promotionCampaign.getSchedule()){
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "scheduleDate", "promotion.err.email.scheduleDate", "Field is empty");
+            ValidationUtils.rejectIfEmptyOrWhitespace(errors, "jobName", "promotion.err.email.jobName", "Field is empty");
         }
     }
 }
