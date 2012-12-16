@@ -35,6 +35,14 @@ public interface UserDao {
 
 
     /**
+     *
+     * @param mobilePhoneNumber
+     * @return
+     */
+    public User getUserByMobilePhoneNumber(String mobilePhoneNumber);
+
+
+    /**
      * @param username
      * @return
      * @throws org.springframework.security.core.userdetails.UsernameNotFoundException

@@ -9,7 +9,7 @@ import ousl.group4.service.CountryService;
 
 import java.util.List;
 
-@Service("countryManager")
+@Service("countryService")
 public class CountryServiceImpl implements CountryService {
 
     @Autowired

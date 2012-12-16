@@ -9,8 +9,10 @@ import java.util.List;
 public class PromotionCampaign {
     private String type;
     private String user;
+    private String subject;
     private String message;
     private Boolean schedule;
+    private String jobName;
     private Date scheduleDate;
     private Integer hour;
     private Integer minute;
@@ -34,6 +36,14 @@ public class PromotionCampaign {
         this.user = user;
     }
 
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
     public String getMessage() {
         return message;
     }
@@ -48,6 +58,14 @@ public class PromotionCampaign {
 
     public void setSchedule(Boolean schedule) {
         this.schedule = schedule;
+    }
+
+    public String getJobName() {
+        return jobName;
+    }
+
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
     }
 
     public Date getScheduleDate() {
