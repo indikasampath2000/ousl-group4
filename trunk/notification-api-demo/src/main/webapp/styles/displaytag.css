@@ -1,0 +1,126 @@
+div.exportlinks {
+    margin: 10px 0 10px 10px;
+    padding: 2px 4px 2px 0;
+    width: 100%;
+}
+
+div.exportlinks a {
+    text-decoration: none;
+}
+
+div.exportlinks span {
+    background-repeat: no-repeat;
+}
+
+span.csv {
+    background-image: url( ../images/ico_file_csv.png );
+}
+
+span.excel {
+    background-image: url( ../images/ico_file_excel.png );
+}
+
+span.pdf {
+    background-image: url( ../images/ico_file_pdf.png );
+}
+
+span.xml {
+    background-image: url( ../images/ico_file_xml.png );
+}
+
+span.export {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 4px 1px 20px;
+}
+
+span.pagebanner {
+    display: block;
+    padding: 10px 10px 0 10px;
+}
+
+span.pagelinks {
+    display: block;
+    /*font-size: .95em;
+    margin-bottom: 5px;*/
+    margin:-15px 0px 0px 0;
+    padding: 2px 0px 2px 0;
+    text-align: right;
+    width: 99%;
+}
+
+th.sorted a, th.sortable a {
+    background-position: right;
+    display: block;
+    text-align:left;
+}
+
+.table th.order1 a {
+    background-image: url( ../images/arrow_down.png ) !important;
+}
+
+.table th.order2 a {
+    background-image: url( ../images/arrow_up.png ) !important;
+}
+
+div#main .tableHeaderImage {
+/* Tapestry */
+    position: absolute;
+    margin: 2px 0 0 -5px;
+    background: transparent;
+    border: 0;
+}
+
+/*.table th.sortable a {
+    background-image: url(../images/arrow_off.png);
+}*/
+
+.table th.sorted {
+    background-color: #ddd;
+    color: #000000;
+}
+
+.table th.sorted a, .table th.sortable a {
+    background-position: right;
+    background-repeat: no-repeat;
+    display: block;
+	font-size:12px;
+	font-weight:bold;
+}
+
+table th.sorted a:hover, .table th.sortable a:hover
+{
+	font-weight:bold !important;
+	}
+
+
+.table tr.even  td{
+    /*background: #eee;*/
+   border-top: 2px solid #ddd;
+ /* border-top:1px solid black;*/
+    color: #000000;
+}
+
+.table tr.odd  td{
+    /*background: #fff; */
+    border-top: 2px solid #ddd;
+	/*border-top:1px solid black;*/
+    color: #000000;
+}
+.table tr.odd  td table tr td{ border:none;
+ 	
+	}
+	.table tr.even  td table tr td{ border:none;
+ 	
+	}
+/* highlight .table row onmouseover */
+.table tr.over {
+    border-bottom: 1px solid #C0C0C0;
+    border-top: 1px solid #C0C0C0;
+    color: #000000;
+    cursor: pointer;
+}
+
+.detail th {
+    text-align: right;
+}

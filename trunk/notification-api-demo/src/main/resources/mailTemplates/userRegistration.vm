@@ -1,8 +1,8 @@
 <table cellpadding="0" cellspacing="0">
     <tr>
-        <td><img src="<cid:logo_x60>" alt="CeyBid"/></td>
+        <td><img src="cid:logo_x60" alt="CeyBid"/></td>
         <td valign="top" style="font-size:10px;color:#555; padding:0 0 0 10px;">
-            <b>CeyBid sent this message to $fullName ($userId).</b><br/>
+            <b>CeyBid sent this message to $fullName ($username).</b><br/>
             Your registered name is included to show this message originated from CeyBid.
         </td>
     </tr>
@@ -13,19 +13,14 @@
 <p>Dear $name,</p>
 
 <p>Welcome to CeyBid Community! <br>
-    Your activation code is <font color="blue">123</font></p>
-Type group4 [space] act [space] [activation code] and send to 0720260442
+    Your activation code is <b>$verificationCode</b></p>
+Type <b>group4</b> [space] <b>act</b> [space] [activation code] and send to 0720260442
    <br>
 <p>If you need additional help, contact CeyBid's Customer Support or <a href="http://help.ceybid.com">Help</a></p>
 
 <hr/>
 
 <div style="font-size:10px; color:#555;">
-    <p>CeyBid sent this email to $email through the CeyBid platform.</p>
-
-    <p>Visit our <a href="$helpUrl/index.php?option=com_content&view=article&id=8&Itemid=11">Privacy Policy</a> and <a
-            href="$helpUrl/index.php?option=com_content&view=article&id=7&Itemid=10">User Agreement</a> if you have any
-        questions.</p>
 
     <p>
         Copyright &copy; 2010 CeyBid Lanka (Private) Limited. All Rights Reserved. Designated trademarks and brands are

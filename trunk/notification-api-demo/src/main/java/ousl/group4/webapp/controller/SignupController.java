@@ -8,15 +8,19 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+import ousl.group4.common.Constants;
 import ousl.group4.email.model.MailKeyBox;
 import ousl.group4.email.model.MailSendType;
 import ousl.group4.email.service.MailSender;
 import ousl.group4.exception.NotificationAPIException;
 import ousl.group4.model.Country;
+import ousl.group4.model.Role;
 import ousl.group4.model.User;
 import ousl.group4.service.CountryService;
+import ousl.group4.service.RoleService;
 import ousl.group4.service.UserService;
 import ousl.group4.sms.model.SmsKeyBox;
+import ousl.group4.webapp.util.RandomNumberGenerator;
 import ousl.group4.webapp.validator.UserValidator;
 
 import java.text.SimpleDateFormat;
@@ -32,6 +36,8 @@ public class SignupController {
     private UserValidator userValidator;
     @Autowired
     private  UserService userService;
+    @Autowired
+    private RoleService roleService;
     @Autowired
     private MailSender mailSender;
 
@@ -64,17 +70,28 @@ public class SignupController {
             // validation fails
             return "signup";
         }else {
+
+            //generate verification code
+            int verificationCode = RandomNumberGenerator.getRandomNumber();
+            user.setEnabled(false);
+            user.setVersion(verificationCode);
+            //set buyer and seller role
+            user.addRole(roleService.getRoleByName(Constants.ROLE_BUYER));
+            user.addRole(roleService.getRoleByName(Constants.ROLE_SELLER));
+            //save user data
             userService.saveUser(user);
 
+            //generate email including activation number
             Map<String,Object> mailMap =new HashMap<String, Object>();
-            mailMap.put(MailKeyBox.SUBJECT,"CeyBid Lanka Private Ltd - User Activation");
+            mailMap.put(MailKeyBox.SUBJECT,"Hurry up ! Activate your account now.");
             mailMap.put(MailKeyBox.SENDER,"ouslgroup4@gmail.com");
             mailMap.put(MailKeyBox.RECIPIENTS, new String[][]{{user.getEmail(), MailSendType.SEND_TO}});
             mailMap.put("fullName", user.getFullName());
-            mailMap.put("userId",user.getId());
-            mailMap.put("title","CeyBid Lanka Private Ltd- User Activation");
+            mailMap.put("username",user.getUsername());
+            mailMap.put("title","User Activation");
             mailMap.put("name",user.getFirstName());
-            mailMap.put(MailKeyBox.INLINE_IMAGES, new String[][]{{"/images/logo_x60.png", "logo_x60"}});
+            mailMap.put("verificationCode", verificationCode);
+            mailMap.put(MailKeyBox.INLINE_IMAGES, new String[][]{{"/tmp/logo_x60.png", "logo_x60"}});
 
             try {
                 mailSender.send(mailMap,"/mailTemplates/userRegistration.vm");
@@ -83,13 +100,10 @@ public class SignupController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
             sessionStatus.setComplete();
             // validation pass
             return "signup-success";
         }
-
     }
 
     /**

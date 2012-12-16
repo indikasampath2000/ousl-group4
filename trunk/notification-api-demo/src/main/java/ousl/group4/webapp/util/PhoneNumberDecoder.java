@@ -7,7 +7,7 @@ public class PhoneNumberDecoder {
 
     public static String decodePhoneNumber(String phoneNumber){
         try {
-            return URLDecoder.decode(phoneNumber, "UTF-8").replaceFirst("94", "0");
+            return URLDecoder.decode(phoneNumber, "UTF-8").replaceFirst("94", "0").trim();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return null;
