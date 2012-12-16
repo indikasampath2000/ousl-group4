@@ -30,4 +30,9 @@ public class ListingServiceImpl implements ListingService{
     public List<Listing> getAllListing() {
         return listingDao.getAllListing();
     }
+
+    @Override
+    public List<Listing> getFirstFiveListing() {
+        return listingDao.getFirstFiveListing();
+    }
 }
