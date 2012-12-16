@@ -55,6 +55,7 @@ public class SmsReceiveController {
                 listing.getPrice()+"\n";
             }
 
+            searchBidItems= searchBidItems + "<group4><bid><id><your bid>";
             //Generate result to send via sms and send
             Map<String, Object> smsMap = new HashMap<String, Object>();
             smsMap.put(SmsKeyBox.SENDER, "0720260442");
