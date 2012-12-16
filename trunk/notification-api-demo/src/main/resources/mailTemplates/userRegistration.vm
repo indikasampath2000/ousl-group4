@@ -12,17 +12,10 @@
 
 <p>Dear $name,</p>
 
-<p>Good news! You're just few clicks away from completing your registration on CeyBid Community. Please click "Activate Now" below to proceed and you will be ready to start shopping on CeyBid in no time!</p>
-
-<div><h2><a href="$url">Activate Now</a></h2></div>
-
-<p><b>If the above link does not work:</b></p>
-
-<p>
-    Type in or copy and paste this link into your Web browser:<br/>
-    <a href="$url">$url</a></h2>
-</p>
-
+<p>Welcome to CeyBid Community! <br>
+    Your activation code is <font color="blue">123</font></p>
+Type group4 [space] act [space] [activation code] and send to 0720260442
+   <br>
 <p>If you need additional help, contact CeyBid's Customer Support or <a href="http://help.ceybid.com">Help</a></p>
 
 <hr/>
