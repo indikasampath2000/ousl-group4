@@ -216,4 +216,12 @@ public class SmsSenderImpl implements SmsSender {
     public List<Sms> getFinishedSmsNotifications() {
         return smsService.getFinishedSmsNotifications();
     }
+
+    /**
+     * @return
+     */
+    @Override
+    public List<Sms> getAllScheduleMailNotifications() {
+        return smsService.getAllScheduleMailNotifications();
+    }
 }

@@ -2,16 +2,16 @@
 
 <head>
     <title>Promotion</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+    </script>
     <script>
         $(document).ready(function() {
-            //add more file components if Add is clicked
-            $('#addFile').click(function() {
-                var fileIndex = $('#fileTable tr').children().length;
-                $('#fileTable').append(
-                        '<tr><td>'+
-                        '<input type="file" name="files['+ fileIndex +']" size="40" />'+
-                        '</td></tr>');
-            });
 
             $('#user1').click(function(){
                $('#uploadUserList').css({
@@ -23,6 +23,19 @@
                 $('#uploadUserList').css({
                     'display':''
                 });
+            });
+
+            $("#scheduleMail").click(function(){
+                var value = $("#scheduleMail").is(":checked");
+                if(value){
+                    $('#scheduleTimer').css({
+                        'display':''
+                    });
+                } else {
+                    $('#scheduleTimer').css({
+                        'display':'none'
+                    });
+                }
             });
 
         });
@@ -50,11 +63,30 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="20%"></td>
-                        <td>
+                        <td class="log-text-style2" width="20%"></td>
+                        <td class="log-text-style2">
                             <div id="uploadUserList" style="display: none;">
-                                <input type="file" name="spreadsheet" size="40" /> (.xls file)<br/>
-                                <span><form:errors path="spreadsheet" cssClass="error" /></span>
+                                Excel file (.xls)
+                                <input type="file" name="spreadsheet" size="30"/><br/>
+                                <span><form:errors path="spreadsheet" cssClass="error"/></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="log-text-style2" width="20%">Schedule Mail</td>
+                        <td class="log-text-style2">
+                            <form:checkbox path="schedule" id="scheduleMail"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="log-text-style2" width="20%"></td>
+                        <td class="log-text-style2">
+                            <div id="scheduleTimer" style="display: none;">
+                                date <form:input path="scheduleDate" id="datepicker"/>
+                                hour <form:select path="hour" items="${hours}"/>
+                                minute <form:select path="minute" items="${minutes}"/>
+                                second <form:select path="second" items="${seconds}"/><br/>
+                                <span><form:errors path="scheduleDate" cssClass="error"/></span>
                             </div>
                         </td>
                     </tr>

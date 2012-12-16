@@ -718,5 +718,13 @@ public class MailSenderImpl implements MailSender {
         return mailService.getFinishedMailNotifications();
     }
 
+    /**
+     * @return
+     */
+    @Override
+    public List<Mail> getAllScheduleMailNotifications() {
+        return mailService.getAllScheduleMailNotifications();
+    }
+
 
 }

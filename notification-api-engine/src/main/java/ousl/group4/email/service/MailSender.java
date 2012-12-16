@@ -70,4 +70,10 @@ public interface MailSender {
      * @return
      */
     List<Mail> getFinishedMailNotifications();
+
+    /**
+     *
+     * @return
+     */
+    List<Mail> getAllScheduleMailNotifications();
 }

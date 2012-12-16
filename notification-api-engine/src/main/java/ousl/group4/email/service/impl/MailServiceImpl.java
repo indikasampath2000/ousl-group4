@@ -54,4 +54,12 @@ public class MailServiceImpl implements MailService {
     public List<Mail> getFinishedMailNotifications() {
         return mailDao.getFinishedMailNotifications();
     }
+
+    /**
+     * @return
+     */
+    @Override
+    public List<Mail> getAllScheduleMailNotifications() {
+        return mailDao.getAllScheduleMailNotifications();
+    }
 }

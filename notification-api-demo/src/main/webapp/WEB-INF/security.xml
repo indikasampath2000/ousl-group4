@@ -19,6 +19,10 @@
         <intercept-url pattern="/home.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
         <intercept-url pattern="/email-promotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
         <intercept-url pattern="/sms-promotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/createEmailPromotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/createSmsPromotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/sentEmailReport.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/sentSmsReport.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
 
 
         <form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?error=true"

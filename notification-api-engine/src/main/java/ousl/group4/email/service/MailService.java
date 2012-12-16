@@ -36,4 +36,10 @@ public interface MailService {
      * @return
      */
     List<Mail> getFinishedMailNotifications();
+
+    /**
+     *
+     * @return
+     */
+    List<Mail> getAllScheduleMailNotifications();
 }
