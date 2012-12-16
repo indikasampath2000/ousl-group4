@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ousl.group4.exception.NotificationAPIException;
+import ousl.group4.model.BidMax;
 import ousl.group4.model.Listing;
+import ousl.group4.service.BidMaxService;
 import ousl.group4.service.ListingService;
 import ousl.group4.sms.model.SmsKeyBox;
 import ousl.group4.sms.service.SmsSender;
@@ -27,6 +29,8 @@ public class SmsReceiveController {
     @Autowired
     private ListingService listingService;
     @Autowired
+    private BidMaxService bidMaxService;
+    @Autowired
     private SmsSender smsSender;
 
     @RequestMapping(value = "/sms-receiver.html", method = RequestMethod.GET)
@@ -39,15 +43,15 @@ public class SmsReceiveController {
         String sms = SmsMessageDecoder.decodeMessage(message);
         StringTokenizer tokenizer = new StringTokenizer(sms);
         String keyword = null;
-        String searchBidItems="";
-        String bidSms =  null;
+        String searchBidItems = "";
+        String bidSms = null;
 
         while (tokenizer.hasMoreElements()) {
             keyword = (String) tokenizer.nextElement();
             if (keyword.equalsIgnoreCase("list")) {
                 break;
             }
-            if (keyword.equalsIgnoreCase("bid")){
+            if (keyword.equalsIgnoreCase("bid")) {
                 bidSms = sms;
                 System.out.println(bidSms);
             }
@@ -55,13 +59,13 @@ public class SmsReceiveController {
 
         if (keyword.equalsIgnoreCase("list")) {
 
-          List<Listing> listingList=  listingService.getFirstFiveListing();
-            for(Listing listing : listingList){
-                searchBidItems=searchBidItems +listing.getId()+ " " + listing.getItem().getSmsSearchName() + " " +
-                listing.getPrice()+"\n";
+            List<Listing> listingList = listingService.getFirstFiveListing();
+            for (Listing listing : listingList) {
+                searchBidItems = searchBidItems + listing.getId() + " " + listing.getItem().getSmsSearchName() + " " +
+                        listing.getPrice() + "\n";
             }
 
-            searchBidItems= searchBidItems + "<group4><bid><id><your bid>";
+            searchBidItems = searchBidItems + "<group4><bid><id><your bid>";
             //Generate result to send via sms and send
             Map<String, Object> smsMap = new HashMap<String, Object>();
             smsMap.put(SmsKeyBox.SENDER, "0720260442");
@@ -74,21 +78,29 @@ public class SmsReceiveController {
                 e.printStackTrace();
             }
         }
-        String listingId  = null;
-        String listingPrice=null;
+        String listingId = null;
+        String listingPrice = null;
         StringTokenizer stringTokenizer1 = new StringTokenizer(bidSms);
-        while (stringTokenizer1.hasMoreElements()){
-            if (stringTokenizer1.nextElement().toString().equalsIgnoreCase("bid")){
+        while (stringTokenizer1.hasMoreElements()) {
+            if (stringTokenizer1.nextElement().toString().equalsIgnoreCase("bid")) {
                 listingId = (String) stringTokenizer1.nextElement();
-                listingPrice= (String) stringTokenizer1.nextElement();
+                listingPrice = (String) stringTokenizer1.nextElement();
                 break;
             }
         }
+        System.out.println(listingId);
+        System.out.println(listingPrice);
+
         Listing listing = listingService.getListingById(Long.parseLong(listingId));
-        if (listing.getMaxBid().doubleValue() < Double.parseDouble(listingPrice))
-        {
-            listing.setMaxBid(new BigDecimal(Double.parseDouble(listingPrice)));
-            listingService.saveListing(listing);
+        BigDecimal maxBid = bidMaxService.getMaxBidByListingId(listing.getId());
+
+        System.out.println(maxBid);
+        if (maxBid.doubleValue() < Double.parseDouble(listingPrice)) {
+            BidMax bidMax = new BidMax();
+            bidMax.setListing(listing);
+            bidMax.setMaxBid(new BigDecimal(Double.parseDouble(listingPrice)));
+
+            bidMaxService.saveBidMax(bidMax);
 
             Map<String, Object> smsMap = new HashMap<String, Object>();
             smsMap.put(SmsKeyBox.SENDER, "0720260442");
@@ -100,9 +112,7 @@ public class SmsReceiveController {
             } catch (NotificationAPIException e) {
                 e.printStackTrace();
             }
-        }
-        else
-        {
+        } else {
             Map<String, Object> smsMap = new HashMap<String, Object>();
             smsMap.put(SmsKeyBox.SENDER, "0720260442");
             smsMap.put(SmsKeyBox.RECIPIENTS, new String[]{mobileNumber});
