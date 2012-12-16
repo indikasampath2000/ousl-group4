@@ -39,4 +39,14 @@ public class ListingDaoImpl implements ListingDao {
                 .setFetchMode("listingTime", FetchMode.JOIN)
                 .setFetchMode("category", FetchMode.JOIN).list();
     }
+
+    @Override
+    public List<Listing> getFirstFiveListing() {
+        return sessionFactory.getCurrentSession().createCriteria(Listing.class)
+                .setFetchMode("item", FetchMode.JOIN)
+                .setFetchMode("listingTime", FetchMode.JOIN)
+                .setFetchMode("category", FetchMode.JOIN)
+                .setMaxResults(5)
+                .list();
+    }
 }

@@ -9,4 +9,5 @@ public interface ListingService {
     Listing saveListing(Listing listing);
     Listing getListingById(Long listingId);
     List<Listing> getAllListing();
+    List<Listing> getFirstFiveListing();
 }

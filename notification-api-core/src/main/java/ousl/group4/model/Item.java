@@ -19,6 +19,7 @@ public class Item implements Serializable {
     private String itemId;
     private User user;
     private String name;
+    private String smsSearchName;
     private String description;
     private String condition;
     private String imagePath;
@@ -62,6 +63,15 @@ public class Item implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Column(name = "sms_search_name")
+    public String getSmsSearchName() {
+        return smsSearchName;
+    }
+
+    public void setSmsSearchName(String smsSearchName) {
+        this.smsSearchName = smsSearchName;
     }
 
     @Column(name = "description")
