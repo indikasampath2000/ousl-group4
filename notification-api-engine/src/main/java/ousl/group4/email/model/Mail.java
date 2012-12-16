@@ -34,7 +34,7 @@ public class Mail implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "mail_schedule_id")
     private MailSchedule mailSchedule;
-    @Column(name = "mail_body")
+    @Column(name = "mail_body", length = 10000)
     private String mailBody;
     @Column(name = "mail_subject")
     private String mailSubject;
