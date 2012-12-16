@@ -8,4 +8,5 @@ public interface BidMaxDao {
 
     BidMax saveBidMax(BidMax bidMax);
     BigDecimal getMaxBidByListingId(Long listingId);
+    BidMax getBidMaxByListingId(Long listingId);
 }

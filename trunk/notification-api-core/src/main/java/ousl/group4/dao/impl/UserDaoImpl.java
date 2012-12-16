@@ -1,6 +1,7 @@
 package ousl.group4.dao.impl;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -26,7 +27,9 @@ public class UserDaoImpl implements UserDao, UserDetailsService {
 
     @Override
     public User getUserByUsername(String username) {
-        return (User) sessionFactory.getCurrentSession().createQuery("from User u where u.username= :username").setParameter("username", username).list().get(0);
+        return (User) sessionFactory.getCurrentSession().createCriteria(User.class)
+                .add(Restrictions.eq("username", username))
+                .uniqueResult();
     }
 
     @SuppressWarnings("unchecked")
@@ -40,6 +43,17 @@ public class UserDaoImpl implements UserDao, UserDetailsService {
         sessionFactory.getCurrentSession().saveOrUpdate(user);
         sessionFactory.getCurrentSession().flush();
         return user;
+    }
+
+    /**
+     * @param mobilePhoneNumber
+     * @return
+     */
+    @Override
+    public User getUserByMobilePhoneNumber(String mobilePhoneNumber) {
+        return (User) sessionFactory.getCurrentSession().createCriteria(User.class)
+                .add(Restrictions.eq("mobileNumber", mobilePhoneNumber))
+                .uniqueResult();
     }
 
     @Override

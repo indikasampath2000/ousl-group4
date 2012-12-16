@@ -19,7 +19,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/RandomNumberGenerator.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/displaytag.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/grid.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/notification_api.h2.db" afterPath="$PROJECT_DIR$/db/notification_api.h2.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/common/Constants.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/common/Constants.java" />
@@ -49,10 +48,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup-success.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup-success.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailSender.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <ignored path="ousl-group4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,11 +118,7 @@
         <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="126" column="27" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#7857#7865#0" expanded="true" />
-                <element signature="e#8517#8533#0" expanded="true" />
-                <element signature="e#9909#9918#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,7 +153,7 @@
       <file leaf-file-name="email-promotion.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="86" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.55125725">
+            <state line="97" column="86" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.029013539">
               <folding />
             </state>
           </provider>
@@ -171,7 +162,7 @@
       <file leaf-file-name="sms-promotion.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="73" selection-start="3427" selection-end="3427" vertical-scroll-proportion="-7.5">
+            <state line="84" column="73" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -225,10 +216,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
     <option name="y" value="24" />
-    <option name="width" value="1294" />
-    <option name="height" value="759" />
+    <option name="width" value="1280" />
+    <option name="height" value="752" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -256,16 +246,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1046,6 +1026,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1060,14 +1050,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="74" />
-    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="66" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="66" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="79" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -1086,22 +1076,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="66" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="851" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="851" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/email" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1124,129 +1114,6 @@
       <recent name="$PROJECT_DIR$/notification-api-demo/src/main/resources" />
       <recent name="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/Item.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/ListingServiceImpl.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/ListingService.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/ListingDaoImpl.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/ListingDao.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/model/Mail.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/UserValidator.java</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/style.css</PATH>
-            <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/userRegistration.vm</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-          <PATH vcs="svn" revision="19">$PROJECT_DIR$/notification-api-demo/notification-api-demo.iml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.TestNotificationApi">
     <configuration default="false" name="TestNotificationApi" type="Application" factoryName="Application" temporary="true">
@@ -1338,6 +1205,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1364,24 +1249,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1555,7 +1422,11 @@
       <created>1355637506128</created>
       <updated>1355637506128</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="code review and some bug fixed">
+      <created>1355698476101</created>
+      <updated>1355698476101</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1579,15 +1450,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="24" width="1294" height="759" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1280" height="752" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495935" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1595,18 +1465,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.6705491" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32445922" sideWeight="0.90178573" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20292208" sideWeight="0.67554075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021104" sideWeight="0.67554075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31946754" sideWeight="0.9983766" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32445922" sideWeight="0.90178573" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1685,116 +1556,84 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/displaytag.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="37" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="27" column="37" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/grid.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="17" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="54" column="17" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-email-report.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="101" selection-start="831" selection-end="831" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
+        <state line="19" column="101" selection-start="831" selection-end="831" vertical-scroll-proportion="-11.875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="81" selection-start="719" selection-end="719" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
+        <state line="18" column="81" selection-start="719" selection-end="719" vertical-scroll-proportion="-11.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/model/Sms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.1.1.RELEASE/spring-context-3.1.1.RELEASE.jar!/org/springframework/validation/Errors.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.3478261">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="73" selection-start="3427" selection-end="3427" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
+        <state line="32" column="12" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.3478261" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="27" selection-start="2425" selection-end="2432" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="69" column="27" selection-start="2425" selection-end="2432" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="101" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.7504621">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="54" selection-start="126" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="75" column="101" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.7504621" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="747" column="57" selection-start="35859" selection-end="35859" vertical-scroll-proportion="0.69500923">
-          <folding />
-        </state>
+        <state line="747" column="57" selection-start="35859" selection-end="35859" vertical-scroll-proportion="0.69500923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.439926">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="66" selection-start="3669" selection-end="3716" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.439926" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="27" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#7857#7865#0" expanded="true" />
-            <element signature="e#8517#8533#0" expanded="true" />
-            <element signature="e#9909#9918#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="126" column="27" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="348" selection-end="355" vertical-scroll-proportion="0.0">
+        <state line="14" column="26" selection-start="348" selection-end="355" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="66" selection-start="3669" selection-end="3716" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="54" selection-start="126" selection-end="254" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="73" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="86" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.55125725">
+        <state line="97" column="86" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.029013539">
           <folding />
         </state>
       </provider>

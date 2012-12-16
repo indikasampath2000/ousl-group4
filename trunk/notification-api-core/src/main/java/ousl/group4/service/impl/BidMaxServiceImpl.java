@@ -25,4 +25,9 @@ public class BidMaxServiceImpl implements BidMaxService{
     public BigDecimal getMaxBidByListingId(Long listingId) {
         return bidMaxDao.getMaxBidByListingId(listingId);
     }
+
+    @Override
+    public BidMax getBidMaxByListingId(Long listingId) {
+        return bidMaxDao.getBidMaxByListingId(listingId);
+    }
 }

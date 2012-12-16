@@ -31,4 +31,12 @@ public interface UserService {
      */
     public User saveUser(User user);
 
+
+    /**
+     *
+     * @param mobilePhoneNumber
+     * @return
+     */
+    public User getUserByMobilePhoneNumber(String mobilePhoneNumber);
+
 }

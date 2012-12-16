@@ -9,7 +9,7 @@ import ousl.group4.service.UserService;
 
 import java.util.List;
 
-@Service("userManager")
+@Service("userService")
 @Transactional
 public class UserServiceImpl implements UserService {
 
@@ -34,6 +34,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public User saveUser(User user) {
         return userDao.saveUser(user);
+    }
+
+    /**
+     * @param mobilePhoneNumber
+     * @return
+     */
+    @Override
+    public User getUserByMobilePhoneNumber(String mobilePhoneNumber) {
+        return userDao.getUserByMobilePhoneNumber(mobilePhoneNumber);
     }
 
 }
