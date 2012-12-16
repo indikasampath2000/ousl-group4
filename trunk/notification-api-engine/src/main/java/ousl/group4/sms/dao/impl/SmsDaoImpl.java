@@ -140,4 +140,25 @@ public class SmsDaoImpl implements SmsDao{
         } finally {
         }
     }
+
+    /**
+     * @return
+     */
+    @Override
+    public List<Sms> getAllScheduleMailNotifications() {
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            List<Sms> pendingSmsList = session.createCriteria(Sms.class)
+                    .add(Restrictions.isNotNull("smsSchedule"))
+                    .list();
+            session.getTransaction().commit();
+            return pendingSmsList;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            session.getTransaction().rollback();
+            return null;
+        } finally {
+        }
+    }
 }

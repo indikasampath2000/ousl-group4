@@ -46,4 +46,10 @@ public interface SmsDao {
      * @return
      */
     List<Sms> getFinishedSmsNotifications();
+
+    /**
+     *
+     * @return
+     */
+    List<Sms> getAllScheduleMailNotifications();
 }

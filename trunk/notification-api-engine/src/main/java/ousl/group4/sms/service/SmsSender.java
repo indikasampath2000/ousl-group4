@@ -38,4 +38,10 @@ public interface SmsSender {
      * @return
      */
     List<Sms> getFinishedSmsNotifications();
+
+    /**
+     *
+     * @return
+     */
+    List<Sms> getAllScheduleMailNotifications();
 }

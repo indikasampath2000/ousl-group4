@@ -29,8 +29,8 @@
         </div>
         <div class="box_data" style="padding-top:5px;">
             <ul class="side_bar">
-                <li><a href="#">Sent Email Report</a></li>
-                <li><a href="#">Sent SMS Report</a></li>
+                <li><a href="<c:url value="/sentEmailReport.html"/>">Sent Email Report</a></li>
+                <li><a href="<c:url value="/sentSmsReport.html"/>">Sent SMS Report</a></li>
                 <li><a href="#">Schedule Email Report</a></li>
                 <li><a href="#">Schedule SMS Report</a></li>
             </ul>

@@ -43,4 +43,10 @@ public interface MailDao {
      */
     List<Mail> getFinishedMailNotifications();
 
+    /**
+     *
+     * @return
+     */
+    List<Mail> getAllScheduleMailNotifications();
+
 }

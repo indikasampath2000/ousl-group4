@@ -2,12 +2,11 @@ package ousl.group4.webapp.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -167,6 +166,8 @@ public class PromotionalCampaignController {
     public void initBinder(WebDataBinder binder) {
         binder.setValidator(promotionalCampaignValidator);
         binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
     }
 
     @ModelAttribute("hours")
@@ -195,5 +196,4 @@ public class PromotionalCampaignController {
         }
         return seconds;
     }
-
 }

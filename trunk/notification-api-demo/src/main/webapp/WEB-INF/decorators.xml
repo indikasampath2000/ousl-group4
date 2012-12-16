@@ -26,6 +26,8 @@
         <pattern>/sms-promotion.html*</pattern>
         <pattern>/createEmailPromotion.html*</pattern>
         <pattern>/createSmsPromotion.html*</pattern>
+        <pattern>/sentEmailReport.html*</pattern>
+        <pattern>/sentSmsReport.html*</pattern>
     </decorator>
 
 </decorators>

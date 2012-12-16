@@ -142,4 +142,25 @@ public class MailDaoImpl implements MailDao {
         } finally {
         }
     }
+
+    /**
+     * @return
+     */
+    @Override
+    public List<Mail> getAllScheduleMailNotifications() {
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            List<Mail> pendingMailList = session.createCriteria(Mail.class)
+                    .add(Restrictions.isNotNull("mailSchedule"))
+                    .list();
+            session.getTransaction().commit();
+            return pendingMailList;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            session.getTransaction().rollback();
+            return null;
+        } finally {
+        }
+    }
 }
