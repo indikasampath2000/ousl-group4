@@ -2,51 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="21d1700e-07ce-4a66-869c-d8b91d5cccc4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images/arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images/arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images/ico_file_csv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images/ico_file_excel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images/ico_file_pdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images/ico_file_xml.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/BidDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/RoleDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/BidDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/RoleDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/BidService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/RoleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/BidServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/RoleServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/RandomNumberGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/displaytag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/grid.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/bidPlaced.vm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/max-bid.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/out-bid.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/common/Constants.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/common/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/BidMaxDao.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/BidMaxDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/UserDao.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/BidMaxDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/BidMaxDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/BidMaxService.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/BidMaxService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/UserService.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/BidMaxServiceImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/BidMaxServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/CountryServiceImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/CountryServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/BidItemController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/BidItemController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/ReportController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/ReportController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/PhoneNumberDecoder.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/PhoneNumberDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/util/SmsMessageDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/UserValidator.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/UserValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/userRegistration.vm" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/userRegistration.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/decorators/inner.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/decorators/inner.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/common/footer.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/common/footer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/common/header.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/common/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/biditem.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/biditem.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-email-report.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-email-report.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup-success.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/signup-success.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
     </list>
     <ignored path="ousl-group4.iws" />
@@ -114,55 +81,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PromotionalCampaignController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java">
+      <file leaf-file-name="BidItemController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/BidItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="27" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.0">
+            <state line="78" column="0" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.4177449">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4583#4599#0" expanded="true" />
+                <element signature="e#5928#5944#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promotion-success.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/promotion-success.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="53" selection-start="592" selection-end="592" vertical-scroll-proportion="-11.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionCampaign.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java">
+      <file leaf-file-name="max-bid.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/max-bid.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="26" selection-start="348" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="19" column="109" selection-start="552" selection-end="624" vertical-scroll-proportion="-11.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestNotificationApi.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
+      <file leaf-file-name="out-bid.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/out-bid.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="66" selection-start="3669" selection-end="3716" vertical-scroll-proportion="0.0">
+            <state line="19" column="87" selection-start="575" selection-end="584" vertical-scroll-proportion="-11.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailScheduleService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailScheduleService.java">
+      <file leaf-file-name="decorators.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="54" selection-start="126" selection-end="254" vertical-scroll-proportion="0.0">
+            <state line="20" column="32" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email-promotion.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp">
+      <file leaf-file-name="security.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml">
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="86" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.029013539">
+            <state line="25" column="47" selection-start="1882" selection-end="1882" vertical-scroll-proportion="-17.857143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms-promotion.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp">
+      <file leaf-file-name="SignupController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="73" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.0">
+            <state line="41" column="35" selection-start="1422" selection-end="1467" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bidPlaced.vm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/bidPlaced.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="32" selection-start="524" selection-end="531" vertical-scroll-proportion="-10.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="biditem.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/biditem.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="57" selection-start="2880" selection-end="2880" vertical-scroll-proportion="-5.5416665">
               <folding />
             </state>
           </provider>
@@ -185,22 +186,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/ReportController.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/displaytag.css" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/decorators/inner.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/grid.css" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-email-report.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java" />
         <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java" />
         <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailSender.java" />
         <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java" />
         <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/common/header.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/common/footer.jsp" />
         <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/ReportController.java" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/bidPlaced.vm" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/max-bid.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/out-bid.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/biditem.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/BidItemController.java" />
       </list>
     </option>
   </component>
@@ -216,9 +217,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="y" value="24" />
-    <option name="width" value="1280" />
-    <option name="height" value="752" />
+    <option name="width" value="1294" />
+    <option name="height" value="759" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -246,6 +248,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -437,160 +449,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ousl-group4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification-api-demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="decorators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1026,16 +884,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1050,14 +898,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="74" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="66" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="66" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="66" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="79" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="OverrideImplement.combined" value="true" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="79" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -1076,30 +924,36 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="66" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="851" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/email" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue/email" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
-    <property name="options.searchVisible" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages" />
+      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates" />
       <recent name="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles" />
       <recent name="$PROJECT_DIR$/db" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/notification-api-engine/src/main/resources" />
-      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages" />
+      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/resources" />
+      <recent name="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ousl.group4.webapp.util" />
@@ -1107,12 +961,6 @@
       <recent name="ousl.group4.workerqueue" />
       <recent name="ousl.group4" />
       <recent name="ousl.group4.email.dao" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/notification-api-engine/src/main/resources" />
-      <recent name="$PROJECT_DIR$/notification-api-demo/src/main/resources" />
-      <recent name="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/workerqueue" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TestNotificationApi">
@@ -1205,24 +1053,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1249,6 +1079,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1426,7 +1274,15 @@
       <created>1355698476101</created>
       <updated>1355698476101</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="code review and some bug fixed">
+      <created>1355699597138</created>
+      <updated>1355699597138</updated>
+    </task>
+    <task id="LOCAL-00014" summary="code review and some bug fixed">
+      <created>1355699930101</created>
+      <updated>1355699930101</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1450,8 +1306,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="752" extended-state="0" />
-    <editor active="false" />
+    <frame x="-7" y="24" width="1294" height="759" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1470,7 +1326,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021104" sideWeight="0.67554075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2012987" sideWeight="0.67554075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31946754" sideWeight="0.9983766" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1554,87 +1410,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/displaytag.css">
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/model/Mail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="37" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/styles/grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="17" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-email-report.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="101" selection-start="831" selection-end="831" vertical-scroll-proportion="-11.875" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sent-sms-report.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="81" selection-start="719" selection-end="719" vertical-scroll-proportion="-11.25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/model/Sms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.1.1.RELEASE/spring-context-3.1.1.RELEASE.jar!/org/springframework/validation/Errors.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.3478261" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/resources/ApplicationResources_en.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="27" selection-start="2425" selection-end="2432" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/validator/PromotionalCampaignValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="101" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.7504621" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="747" column="57" selection-start="35859" selection-end="35859" vertical-scroll-proportion="0.69500923" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.439926" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="27" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="348" selection-end="355" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="66" selection-start="3669" selection-end="3716" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/MailScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="54" selection-start="126" selection-end="254" vertical-scroll-proportion="0.0" />
+        <state line="15" column="13" selection-start="316" selection-end="316" vertical-scroll-proportion="0.026086956">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="73" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.0">
+        <state line="106" column="96" selection-start="4689" selection-end="4689" vertical-scroll-proportion="0.9419729">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="86" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.029013539">
+        <state line="143" column="97" selection-start="6552" selection-end="6552" vertical-scroll-proportion="0.7211896">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/ReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="8" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/PromotionCampaign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="26" selection-start="348" selection-end="355" vertical-scroll-proportion="0.027075812">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/userRegistration.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="63" selection-start="241" selection-end="249" vertical-scroll-proportion="0.11320755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="35" selection-start="1422" selection-end="1467" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/max-bid.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="109" selection-start="552" selection-end="624" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="35" selection-start="1122" selection-end="1167" vertical-scroll-proportion="0.29783395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/bidPlaced.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="524" selection-end="531" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/promotion-success.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="53" selection-start="592" selection-end="592" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/biditem.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="57" selection-start="2880" selection-end="2880" vertical-scroll-proportion="-5.5416665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/out-bid.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="87" selection-start="575" selection-end="584" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="32" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="47" selection-start="1882" selection-end="1882" vertical-scroll-proportion="-17.857143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/BidItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.4177449">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4583#4599#0" expanded="true" />
+            <element signature="e#5928#5944#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

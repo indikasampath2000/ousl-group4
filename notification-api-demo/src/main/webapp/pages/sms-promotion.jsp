@@ -82,11 +82,28 @@
                         <td class="log-text-style2" width="20%"></td>
                         <td class="log-text-style2">
                             <div id="scheduleTimer" style="display: none;">
-                                job name <form:input path="jobName"/><br/>
-                                date <form:input path="scheduleDate" id="datepicker"/>
-                                hour <form:select path="hour" items="${hours}"/>
-                                minute <form:select path="minute" items="${minutes}"/>
-                                second <form:select path="second" items="${seconds}"/><br/>
+                                <table>
+                                    <tr>
+                                        <td>job name</td>
+                                        <td><form:input path="jobName"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>date</td>
+                                        <td><form:input path="scheduleDate" id="datepicker"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>hour</td>
+                                        <td><form:select path="hour" items="${hours}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>minute</td>
+                                        <td><form:select path="minute" items="${minutes}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>second</td>
+                                        <td> <form:select path="second" items="${seconds}"/></td>
+                                    </tr>
+                                </table>
                                 <span><form:errors path="scheduleDate" cssClass="error"/></span>
                             </div>
                         </td>

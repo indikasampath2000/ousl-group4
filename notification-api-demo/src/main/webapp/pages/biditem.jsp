@@ -90,9 +90,9 @@
             </div>
             <div class="item-data-col2">
                 <div class="count-dwn-wrapper">
-                    <div class="hr">30</div>
-                    <div class="min">20</div>
-                    <div class="sec">10</div>
+                    <div class="hr">${hours}</div>
+                    <div class="min">${minutes}</div>
+                    <div class="sec">${seconds}</div>
                     <div class="bids">${listing.bidCount}</div>
                 </div>
                 <div class="clear"></div>
@@ -102,11 +102,12 @@
 
                 <div class="clear"></div>
 
-                <form action="" method="get">
+                <form action="place-bid.html" method="post">
+                    <input type="hidden" value="${listing.id}" name="lt"/>
                     <div class="price-box2">
                         <span class="itm-price">Quantity: ${listing.quantityRemain} </span>
                         <span class="last-bid">Item condition: New</span>
-                        <span class="last-bid">Bid: <input name="textfield" type="text" id="textfield" size="7"/></span>
+                        <span class="last-bid">Bid: <input name="bidAmount" type="text" id="textfield" size="7"/></span>
                     </div>
                     <input class="bid-btn" name="" type="image" src="images/bid.jpg"/>
                 </form>

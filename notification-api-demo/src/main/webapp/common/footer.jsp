@@ -3,7 +3,7 @@
 
 <div id="footer">
     <div class="feedback"><a href="#"><img src="images/fedback.png" border="0"/></a></div>
-    <div class="menu">My Cyebid - Buy - Sell - Help - Contact us</div>
+    <div class="menu">Home - About us - Help - Contact us</div>
     <div class="clear"></div>
     <div class="copyright">
         Copyright &copy; CeyBid Lanka (Private) Limited. All Rights Reserved. Designated trademarks and

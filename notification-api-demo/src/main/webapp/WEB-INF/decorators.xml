@@ -18,6 +18,7 @@
         <pattern>/login.jsp*</pattern>
         <pattern>/goodbye.html*</pattern>
         <pattern>/biditem.html*</pattern>
+        <pattern>/place-bid.html*</pattern>
     </decorator>
 
     <decorator name="inner" page="inner.jsp">
