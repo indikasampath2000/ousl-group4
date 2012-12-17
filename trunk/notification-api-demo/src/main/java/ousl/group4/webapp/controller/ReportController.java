@@ -23,7 +23,6 @@ public class ReportController {
     @RequestMapping(value = "/sentEmailReport.html", method = RequestMethod.GET)
     public String sentEmailReportHandler(ModelMap modelMap){
         List<Mail> sentMails = mailSender.getFinishedMailNotifications();
-        System.out.println(sentMails.size());
         modelMap.addAttribute("sentMails", sentMails);
 
         return "sent-email-report";
@@ -32,7 +31,6 @@ public class ReportController {
     @RequestMapping(value = "/sentSmsReport.html", method = RequestMethod.GET)
     public String sentSmsReportHandler(ModelMap modelMap){
         List<Sms> sentSmses = smsSender.getFinishedSmsNotifications();
-        System.out.println(sentSmses.size());
         modelMap.addAttribute("sentSmses", sentSmses);
 
         return "sent-sms-report";

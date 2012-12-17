@@ -14,11 +14,19 @@
 
         <div class="top-menu">
             <ul>
-                <li><a href="#">My Ceybid</a></li>
+                <li>
+<security:authorize ifAllGranted="ROLE_ANONYMOUS">
+    <a href="<c:url value="/welcome.html"/>">Home</a>
+</security:authorize>
+<security:authorize ifAnyGranted="ROLE_USER, ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER">
+    <a href="<c:url value="/home.html"/>">Home</a>
+</security:authorize>
+
+                </li>
                 <li><img src="images/sepa.png"/></li>
-                <li><a href="#">Buy</a></li>
+                <li><a href="#">About us</a></li>
                 <li><img src="images/sepa.png"/></li>
-                <li><a href="#">Sell</a></li>
+                <li><a href="#">Help</a></li>
                 <li><img src="images/sepa.png"/></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
