@@ -23,6 +23,7 @@ import ousl.group4.sms.model.SmsKeyBox;
 import ousl.group4.webapp.util.RandomNumberGenerator;
 import ousl.group4.webapp.validator.UserValidator;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -74,7 +75,7 @@ public class SignupController {
             //generate verification code
             int verificationCode = RandomNumberGenerator.getRandomNumber();
             user.setEnabled(false);
-            user.setVersion(verificationCode);
+            user.setVerificationCode(verificationCode);
             //set buyer and seller role
             user.addRole(roleService.getRoleByName(Constants.ROLE_BUYER));
             user.addRole(roleService.getRoleByName(Constants.ROLE_SELLER));

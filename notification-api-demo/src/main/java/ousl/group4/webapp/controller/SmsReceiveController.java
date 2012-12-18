@@ -166,7 +166,7 @@ public class SmsReceiveController {
 							break;
 						}
 					}
-					if (user.getVersion() == Integer.parseInt(activationCode)) {
+					if (user.getVerificationCode() == Integer.parseInt(activationCode)) {
 						user.setEnabled(true);
 						userService.saveUser(user);
 						// generate sms

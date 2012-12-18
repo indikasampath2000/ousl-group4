@@ -1,6 +1,8 @@
 package ousl.group4.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ousl.group4.dao.UserDao;
@@ -33,6 +35,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) {
+        PasswordEncoder passwordEncoder = new Md5PasswordEncoder();
+        if(user.getVersion() == null){
+            user.setPassword(passwordEncoder.encodePassword(user.getPassword(), null));
+        }
         return userDao.saveUser(user);
     }
 
