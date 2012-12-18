@@ -15,8 +15,8 @@ public class SmsScheduleServiceImpl implements SmsScheduleService{
      * @param smsSchedule
      */
     @Override
-    public SmsSchedule saveMailSchedule(SmsSchedule smsSchedule) {
-        return smsScheduleDao.saveMailSchedule(smsSchedule);
+    public SmsSchedule saveSmsSchedule(SmsSchedule smsSchedule) {
+        return smsScheduleDao.saveSmsSchedule(smsSchedule);
     }
 
     /**

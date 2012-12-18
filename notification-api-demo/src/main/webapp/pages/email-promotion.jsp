@@ -103,9 +103,13 @@
                         <td class="log-text-style2" width="20%"></td>
                         <td class="log-text-style2">
                             <div id="uploadUserList" style="display: none;">
-                                Excel file (.xls)
-                                <input type="file" name="spreadsheet" size="30"/><br/>
-                                <span><form:errors path="spreadsheet" cssClass="error"/></span>
+                                <table>
+                                    <tr>
+                                        <td>excel file (.xls)</td>
+                                        <td><input type="file" name="spreadsheet" size="30"/><br/>
+                                            <span><form:errors path="spreadsheet" cssClass="error"/></span></td>
+                                    </tr>
+                                </table>
                             </div>
                         </td>
                     </tr>

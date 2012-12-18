@@ -14,7 +14,7 @@ public class SmsScheduleDaoImpl implements SmsScheduleDao{
      * @param smsSchedule
      */
     @Override
-    public SmsSchedule saveMailSchedule(SmsSchedule smsSchedule) {
+    public SmsSchedule saveSmsSchedule(SmsSchedule smsSchedule) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();

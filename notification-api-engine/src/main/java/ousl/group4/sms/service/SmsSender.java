@@ -30,7 +30,7 @@ public interface SmsSender {
      * @param smsSchedule contains schedule job data
      * @throws Exception
      */
-    void scheduleMail(Map<String, Object> smsMap, SmsSchedule smsSchedule) throws NotificationAPIException;
+    void scheduleSms(Map<String, Object> smsMap, SmsSchedule smsSchedule) throws NotificationAPIException;
 
     /**
      * This method return List object of finished Sms notification
@@ -44,4 +44,19 @@ public interface SmsSender {
      * @return
      */
     List<Sms> getAllScheduleMailNotifications();
+
+    /**
+     * persist sms schedule
+     *
+     * @param smsSchedule
+     */
+    SmsSchedule saveSmsSchedule(SmsSchedule smsSchedule);
+
+    /**
+     * return SmsSchedule object if job already exist
+     *
+     * @param jobName
+     * @return
+     */
+    SmsSchedule isScheduleJobExist(String jobName);
 }

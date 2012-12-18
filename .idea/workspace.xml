@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="21d1700e-07ce-4a66-869c-d8b91d5cccc4" name="Default" comment="code review and some bug fixed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/resources/logo_x60.png" />
+    <list default="true" readonly="true" id="21d1700e-07ce-4a66-869c-d8b91d5cccc4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/mysql-db.sql" afterPath="$PROJECT_DIR$/db/mysql-db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/User.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" afterPath="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/SmsScheduleDao.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/SmsScheduleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsScheduleService.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsScheduleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsSender.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsScheduleServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsSenderImpl.java" afterPath="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsSenderImpl.java" />
     </list>
     <ignored path="ousl-group4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,13 +88,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java">
+      <file leaf-file-name="PromotionalCampaignController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="0" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.455516">
-              <folding>
-                <element signature="e#2940#2956#0" expanded="true" />
-              </folding>
+            <state line="204" column="106" selection-start="9075" selection-end="9075" vertical-scroll-proportion="0.9182561">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsSenderImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsSenderImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="47" selection-start="3739" selection-end="3739" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MailSenderImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="672" column="20" selection-start="33203" selection-end="33203" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,15 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/ReportController.java" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/resources/mailTemplates/bidPlaced.vm" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/security.xml" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/max-bid.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/out-bid.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/biditem.jsp" />
-        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/WEB-INF/decorators.xml" />
-        <option value="$PROJECT_DIR$/notification-api-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/model/User.java" />
         <option value="$PROJECT_DIR$/notification-api-core/src/main/resources/applicationContext-service.xml" />
         <option value="$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java" />
@@ -128,6 +139,15 @@
         <option value="$PROJECT_DIR$/db/mysql-db.sql" />
         <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java" />
         <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/BidItemController.java" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsScheduleService.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/SmsScheduleDao.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsSender.java" />
+        <option value="$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsScheduleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsSenderImpl.java" />
       </list>
     </option>
   </component>
@@ -714,7 +734,11 @@
       <created>1355723625108</created>
       <updated>1355723625108</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="code review and some bug fixed">
+      <created>1355800283103</created>
+      <updated>1355800283103</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -753,13 +777,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.6705491" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32445922" sideWeight="0.90178573" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32445922" sideWeight="0.90178573" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23457792" sideWeight="0.68053246" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23457792" sideWeight="0.67554075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31946754" sideWeight="0.9983766" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -842,76 +866,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.1.RELEASE/spring-security-core-3.1.1.RELEASE.jar!/org/springframework/security/authentication/encoding/PasswordEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17013232" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/resources/applicationContext-service.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="65" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/resources/applicationContext-dao.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/resources/logo_x60.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/test/TestNotificationApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="44" selection-start="5031" selection-end="5031" vertical-scroll-proportion="2.5250502">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="32" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/mysql-db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="372" column="279" selection-start="17370" selection-end="17370" vertical-scroll-proportion="0.7245841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notification-api-core/src/main/java/ousl/group4/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="16" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0">
@@ -944,19 +898,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="672" column="20" selection-start="33203" selection-end="33203" vertical-scroll-proportion="14.919929">
+        <state line="94" column="0" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2940#2956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/email-promotion.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="42" selection-start="4405" selection-end="4815" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SignupController.java">
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/webapp/pages/sms-promotion.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.455516">
-          <folding>
-            <element signature="e#2940#2956#0" expanded="true" />
-          </folding>
+        <state line="74" column="40" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/email/service/impl/MailSenderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="672" column="20" selection-start="33203" selection-end="33203" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/impl/SmsScheduleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="409" selection-end="409" vertical-scroll-proportion="-0.23827392">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/dao/SmsScheduleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.29783395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsScheduleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="35" selection-start="559" selection-end="559" vertical-scroll-proportion="0.4061372">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.29783395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/SmsSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.28519857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-engine/src/main/java/ousl/group4/sms/service/impl/SmsSenderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="47" selection-start="3739" selection-end="3739" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/SmsReceiveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="47" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification-api-demo/src/main/java/ousl/group4/webapp/controller/PromotionalCampaignController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="106" selection-start="9075" selection-end="9075" vertical-scroll-proportion="0.9182561">
+          <folding />
         </state>
       </provider>
     </entry>
