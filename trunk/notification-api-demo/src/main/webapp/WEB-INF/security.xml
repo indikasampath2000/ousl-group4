@@ -23,6 +23,8 @@
         <intercept-url pattern="/createSmsPromotion.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
         <intercept-url pattern="/sentEmailReport.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
         <intercept-url pattern="/sentSmsReport.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/scheduleEmailReport.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
+        <intercept-url pattern="/scheduleSmsReport.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
         <intercept-url pattern="/place-bid.html*" access="ROLE_ADMIN, ROLE_BUYER, ROLE_SELLER"/>
 
 

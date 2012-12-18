@@ -33,8 +33,8 @@
             <ul class="side_bar">
                 <li><a href="<c:url value="/sentEmailReport.html"/>">Sent Email Report</a></li>
                 <li><a href="<c:url value="/sentSmsReport.html"/>">Sent SMS Report</a></li>
-                <li><a href="#">Schedule Email Report</a></li>
-                <li><a href="#">Schedule SMS Report</a></li>
+                <li><a href="<c:url value="/scheduleEmailReport.html"/>">Schedule Email Report</a></li>
+                <li><a href="<c:url value="/scheduleSmsReport.html"/>">Schedule SMS Report</a></li>
             </ul>
         </div>
 
