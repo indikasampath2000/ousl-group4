@@ -8,6 +8,7 @@ import ousl.group4.sms.model.Sms;
 import ousl.group4.sms.model.SmsKeyBox;
 import ousl.group4.sms.model.SmsRecipients;
 import ousl.group4.sms.model.SmsSchedule;
+import ousl.group4.sms.service.SmsScheduleService;
 import ousl.group4.sms.service.SmsSender;
 import ousl.group4.sms.service.SmsService;
 
@@ -20,6 +21,7 @@ import java.util.regex.*;
 public class SmsSenderImpl implements SmsSender {
 
     private SmsService smsService = new SmsServiceImpl();
+    private SmsScheduleService smsScheduleService = new SmsScheduleServiceImpl();
 
     /**
      * @param smsMap Must contains the below key names with relevant values
@@ -38,7 +40,7 @@ public class SmsSenderImpl implements SmsSender {
         if (sender == null || sender.isEmpty()) {
             throw new NotificationAPIException("sender is null or empty");
         }
-        if(!pattern.matcher(sender).matches()){
+        if (!pattern.matcher(sender).matches()) {
             throw new NotificationAPIException("invalid sender phone number");
         }
         String[] recipients = (String[]) smsMap.get("recipients");
@@ -48,8 +50,8 @@ public class SmsSenderImpl implements SmsSender {
         for (int i = 0; i < recipients.length; i++) {
             if (recipients[i].isEmpty()) {
                 throw new NotificationAPIException("recipient is null or empty");
-            }else {
-                if(!pattern.matcher(recipients[i]).matches()){
+            } else {
+                if (!pattern.matcher(recipients[i]).matches()) {
                     throw new NotificationAPIException("invalid recipient phone number");
                 }
             }
@@ -86,15 +88,15 @@ public class SmsSenderImpl implements SmsSender {
      * @throws Exception
      */
     @Override
-    public void scheduleMail(Map<String, Object> smsMap, SmsSchedule smsSchedule) throws NotificationAPIException {
+    public void scheduleSms(Map<String, Object> smsMap, SmsSchedule smsSchedule) throws NotificationAPIException {
 
-        Pattern pattern = Pattern.compile("\\d");
+        Pattern pattern = Pattern.compile("\\d*");
 
         String sender = (String) smsMap.get("sender");
         if (sender == null || sender.isEmpty()) {
             throw new NotificationAPIException("sender is null or empty");
         }
-        if(!pattern.matcher(sender).matches()){
+        if (!pattern.matcher(sender).matches()) {
             throw new NotificationAPIException("invalid sender phone number");
         }
         String[] recipients = (String[]) smsMap.get("recipients");
@@ -104,8 +106,8 @@ public class SmsSenderImpl implements SmsSender {
         for (int i = 0; i < recipients.length; i++) {
             if (recipients[i].isEmpty()) {
                 throw new NotificationAPIException("recipient is null or empty");
-            }else {
-                if(!pattern.matcher(recipients[i]).matches()){
+            } else {
+                if (!pattern.matcher(recipients[i]).matches()) {
                     throw new NotificationAPIException("invalid recipient phone number");
                 }
             }
@@ -154,27 +156,27 @@ public class SmsSenderImpl implements SmsSender {
             scheduler = StdSchedulerFactory.getDefaultScheduler();
 
             // Start scheduler
-            if(scheduler.isShutdown()){
+            if (scheduler.isShutdown()) {
                 scheduler.start();
             }
 
             // Get the job details if already exist
-            JobKey key = new JobKey(smsSchedule.getJobName(), smsSchedule.getJobName()+"Group");
+            JobKey key = new JobKey(smsSchedule.getJobName(), smsSchedule.getJobName() + "Group");
             JobDetail smsNotificationJob = scheduler.getJobDetail(key);
 
             // If job details not found then create new job
             if (smsNotificationJob == null) {
                 // Initiate JobDetail with job name, job group, and executable job class
                 JobDetail jobDetail = JobBuilder.newJob(ScheduleSmsNotificationJob.class)
-                        .withIdentity(smsSchedule.getJobName(), smsSchedule.getJobName()+"Group")
+                        .withIdentity(smsSchedule.getJobName(), smsSchedule.getJobName() + "Group")
                         .build();
 
                 // set job to execute
                 jobDetail.getJobDataMap().put("smsJobName", smsSchedule.getJobName());
 
-                if(smsSchedule.getScheduleType().equalsIgnoreCase(SmsKeyBox.FIRE_ONCE)){
-                    SimpleTrigger simpleTrigger = (SimpleTrigger)TriggerBuilder.newTrigger()
-                            .withIdentity(smsSchedule.getJobName()+"SimpleTrigger", smsSchedule.getJobName()+"SimpleTriggerGroup")
+                if (smsSchedule.getScheduleType().equalsIgnoreCase(SmsKeyBox.FIRE_ONCE)) {
+                    SimpleTrigger simpleTrigger = (SimpleTrigger) TriggerBuilder.newTrigger()
+                            .withIdentity(smsSchedule.getJobName() + "SimpleTrigger", smsSchedule.getJobName() + "SimpleTriggerGroup")
                             .startAt(smsSchedule.getScheduleDateTime())
                             .build();
 
@@ -182,10 +184,10 @@ public class SmsSenderImpl implements SmsSender {
                     scheduler.scheduleJob(jobDetail, simpleTrigger);
                 }
 
-                if(smsSchedule.getScheduleType().equalsIgnoreCase(SmsKeyBox.FIRE_REPEAT)){
+                if (smsSchedule.getScheduleType().equalsIgnoreCase(SmsKeyBox.FIRE_REPEAT)) {
                     // Initiate CronTrigger with its name and group name
                     CronTrigger cronTrigger = (CronTrigger) TriggerBuilder.newTrigger()
-                            .withIdentity(smsSchedule.getJobName()+"CronTrigger", smsSchedule.getJobName()+"CronTriggerGroup")
+                            .withIdentity(smsSchedule.getJobName() + "CronTrigger", smsSchedule.getJobName() + "CronTriggerGroup")
                             .withPriority(1)
                             .withSchedule(CronScheduleBuilder.cronSchedule(smsSchedule.getCronExpression()))
                             .build();
@@ -223,5 +225,26 @@ public class SmsSenderImpl implements SmsSender {
     @Override
     public List<Sms> getAllScheduleMailNotifications() {
         return smsService.getAllScheduleMailNotifications();
+    }
+
+    /**
+     * persist sms schedule
+     *
+     * @param smsSchedule
+     */
+    @Override
+    public SmsSchedule saveSmsSchedule(SmsSchedule smsSchedule) {
+        return smsScheduleService.saveSmsSchedule(smsSchedule);
+    }
+
+    /**
+     * return SmsSchedule object if job already exist
+     *
+     * @param jobName
+     * @return
+     */
+    @Override
+    public SmsSchedule isScheduleJobExist(String jobName) {
+        return smsScheduleService.isScheduleJobExist(jobName);
     }
 }

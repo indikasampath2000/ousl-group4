@@ -25,6 +25,7 @@ import ousl.group4.model.PromotionCampaign;
 import ousl.group4.model.User;
 import ousl.group4.service.UserService;
 import ousl.group4.sms.model.SmsKeyBox;
+import ousl.group4.sms.model.SmsSchedule;
 import ousl.group4.sms.service.SmsSender;
 import ousl.group4.webapp.util.SpreadSheetUtil;
 import ousl.group4.webapp.validator.PromotionalCampaignValidator;
@@ -196,7 +197,36 @@ public class PromotionalCampaignController {
             smsMap.put(SmsKeyBox.SENDER, "0720260442");
             smsMap.put(SmsKeyBox.RECIPIENTS, (String[]) phoneNumbers.toArray(new String[phoneNumbers.size()]));
             smsMap.put(SmsKeyBox.SMS_BODY, promotionCampaign.getMessage());
-            smsSender.send(smsMap);
+
+            //if not select schedule
+            if(!promotionCampaign.getSchedule()){
+                smsSender.send(smsMap);
+            } else {
+                SmsSchedule smsSchedule = smsSender.isScheduleJobExist(promotionCampaign.getJobName());
+                if(smsSchedule == null){
+                    smsSchedule = new SmsSchedule();
+                    smsSchedule.setJobName(promotionCampaign.getJobName());
+                    smsSchedule.setScheduleType(SmsKeyBox.FIRE_ONCE);
+                    Date date = promotionCampaign.getScheduleDate();
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.setTime(date);
+                    calendar.set(Calendar.SECOND, promotionCampaign.getSecond());
+                    calendar.set(Calendar.MINUTE, promotionCampaign.getMinute());
+                    calendar.set(Calendar.HOUR_OF_DAY, promotionCampaign.getHour());
+                    calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH));
+                    calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
+                    calendar.set(Calendar.YEAR, calendar.get(Calendar.YEAR));
+                    smsSchedule.setScheduleDateTime(calendar.getTime());
+                    smsSender.saveSmsSchedule(smsSchedule);
+
+                    try {
+                        smsSender.scheduleSms(smsMap, smsSchedule);
+                    } catch (NotificationAPIException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
             sessionStatus.setComplete();
             // validation pass
             return "promotion-success";

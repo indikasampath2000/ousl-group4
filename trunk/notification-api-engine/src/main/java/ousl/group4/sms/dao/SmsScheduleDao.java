@@ -9,7 +9,7 @@ public interface SmsScheduleDao {
      *
      * @param smsSchedule
      */
-    SmsSchedule saveMailSchedule(SmsSchedule smsSchedule);
+    SmsSchedule saveSmsSchedule(SmsSchedule smsSchedule);
 
     /**
      * return SmsSchedule object if job already exist
