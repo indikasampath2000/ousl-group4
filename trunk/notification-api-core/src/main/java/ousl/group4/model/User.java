@@ -42,6 +42,7 @@ public class User implements Serializable, UserDetails {
     private String secretAnswer;
     private boolean accountEnabled;
     private Integer version;
+    private Integer verificationCode;
     private Date joinDate;
     private boolean accountExpired;
     private boolean accountLocked;
@@ -189,6 +190,15 @@ public class User implements Serializable, UserDetails {
 
     public void setVersion(Integer version) {
         this.version = version;
+    }
+
+    @Column(name = "verification_code")
+    public Integer getVerificationCode() {
+        return verificationCode;
+    }
+
+    public void setVerificationCode(Integer verificationCode) {
+        this.verificationCode = verificationCode;
     }
 
     @Column(name = "join_date")

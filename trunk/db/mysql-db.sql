@@ -354,6 +354,7 @@ CREATE TABLE `user` (
   `secret_answer` varchar(255) DEFAULT NULL,
   `account_enabled` tinyint(1) DEFAULT '0',
   `version` int(11) DEFAULT '0',
+  `verification_code` int(11) DEFAULT '0',
   `join_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `account_expired` tinyint(1) DEFAULT '0',
   `account_locked` tinyint(1) DEFAULT '0',
@@ -369,7 +370,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'indikasampath2000','260ca9dd8a4577fc00b7bd5810298076','Indika','Sampath','','B1/3, Sucharitha Mawatha','Colombo 12','Colombo','M','1986-03-07 00:00:00','0716424744',NULL,'What is the brand of your phone?','Android',1,1,'2012-08-04 00:00:00',0,0,0);
+INSERT INTO `user` VALUES (1,'indikasampath2000','260ca9dd8a4577fc00b7bd5810298076','Indika','Sampath','indikasampath2000@yahoo.com','B1/3, Sucharitha Mawatha','Colombo 12','Colombo','M','1986-03-07 00:00:00','0716424744',NULL,'What is the brand of your phone?','Android',1,1,123,'2012-08-04 00:00:00',0,0,0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
