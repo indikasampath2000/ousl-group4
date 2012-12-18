@@ -2,7 +2,7 @@
 <%@ page import="org.springframework.security.core.AuthenticationException" %>
 
 <head>
-    <title>Sent Email Report</title>
+    <title>Sent Sms Report</title>
 </head>
 
 

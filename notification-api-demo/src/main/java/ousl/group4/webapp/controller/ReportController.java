@@ -36,6 +36,20 @@ public class ReportController {
         return "sent-sms-report";
     }
 
+    @RequestMapping(value = "/scheduleEmailReport.html", method = RequestMethod.GET)
+    public String scheduleMailReportHandler(ModelMap modelMap){
+        List<Mail> scheduleMails = mailSender.getAllScheduleMailNotifications();
+        modelMap.addAttribute("scheduleMails", scheduleMails);
 
+        return "schedule-email-report";
+    }
+
+    @RequestMapping(value = "/scheduleSmsReport.html", method = RequestMethod.GET)
+    public String scheduleSmsReportHandler(ModelMap modelMap){
+        List<Sms> scheduleSmses = smsSender.getAllScheduleMailNotifications();
+        modelMap.addAttribute("scheduleSmses", scheduleSmses);
+
+        return "schedule-sms-report";
+    }
 
 }

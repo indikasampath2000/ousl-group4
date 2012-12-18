@@ -105,7 +105,7 @@
                             <div id="uploadUserList" style="display: none;">
                                 <table>
                                     <tr>
-                                        <td>excel file (.xls)</td>
+                                        <td>excel file</td>
                                         <td><input type="file" name="spreadsheet" size="30"/><br/>
                                             <span><form:errors path="spreadsheet" cssClass="error"/></span></td>
                                     </tr>

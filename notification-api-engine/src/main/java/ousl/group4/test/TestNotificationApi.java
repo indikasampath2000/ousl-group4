@@ -44,7 +44,7 @@ public class TestNotificationApi {
             calendar.set(Calendar.MONTH, 10);
             calendar.set(Calendar.YEAR, 2012);
             mailSchedule.setScheduleDateTime(calendar.getTime());
-            mailSender.saveMailSchedule(mailSchedule);
+            //mailSender.saveMailSchedule(mailSchedule);
         }
 
         String[][] mailAddress = {
