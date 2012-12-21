@@ -14,9 +14,11 @@ public interface SmsSender {
 
     /**
      * @param smsMap Must contains the below key names with relevant values
-     *               sender : the sender mobile. cannot be null
-     *               recipients : the receiver(s) mobile number (String[] array object). cannot be null.
-     *               smsBody : the body of sms. cannot be null
+     *               <p>
+     *               sender : the sender mobile. cannot be null<br/>
+     *               recipients : the receiver(s) mobile number (String[] array object). cannot be null.<br/>
+     *               smsBody : the body of sms. cannot be null</p>
+     * @see ousl.group4.sms.model.SmsKeyBox
      * @throws ousl.group4.exception.NotificationAPIException
      *
      */
@@ -24,9 +26,11 @@ public interface SmsSender {
 
     /**
      * @param smsMap      Must contains the below key names with relevant values
-     *                    sender : the sender mobile. cannot be null
-     *                    recipients : the receiver(s) mobile number (String[] array object). cannot be null.
-     *                    smsBody : the body of sms. cannot be null
+     *                    <p>
+     *                    sender : the sender mobile. cannot be null<br/>
+     *                    recipients : the receiver(s) mobile number (String[] array object). cannot be null.<br/>
+     *                    smsBody : the body of sms. cannot be null</p>
+     * @see ousl.group4.sms.model.SmsKeyBox
      * @param smsSchedule contains schedule job data
      * @throws Exception
      */
@@ -40,6 +44,7 @@ public interface SmsSender {
     List<Sms> getFinishedSmsNotifications();
 
     /**
+     * This method return List object of schedule Sms notification
      *
      * @return
      */
