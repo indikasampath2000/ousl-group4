@@ -40,6 +40,6 @@ public class BidMaxDaoImpl implements BidMaxDao{
         return (BidMax) sessionFactory.getCurrentSession().createCriteria(BidMax.class)
                 .setFetchMode("listing", FetchMode.JOIN)
                 .add(Restrictions.eq("listing.id", listingId))
-                .uniqueResult();
+                .list().get(0);
     }
 }
